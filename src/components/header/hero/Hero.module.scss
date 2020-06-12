@@ -8,8 +8,8 @@
     height: 400px;
     .Logo {
         background: $theme-secondary-color url('../../../assets//images/qsquare_logo.png') no-repeat center center;
-        background-size: contain;
-        width: 50%;
+        background-size: 120%;
+        width: 40%;
         height: 100%;
     }
     .Info {
@@ -17,11 +17,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 50%;
+        width: 60%;
         padding: 6%;
         color: #fff;
         font-size: 150%;
-        background-color: transparentize($color: $theme-primary-color, $amount: 0.4);
+        background-color: transparentize($color: $theme-primary-color, $amount: 0.2);
         p {
             line-height: 2.5rem;
             margin: 0 0 2rem 0;
