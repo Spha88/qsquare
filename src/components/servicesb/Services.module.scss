@@ -4,8 +4,10 @@
     .Services_header {
         position: relative;
         text-align: center;
+        margin-bottom: 4rem;
         h1 {
             margin: 0;
+            font-size: 3.5em;
             position: relative;
             display: inline-block;
             @include squares-left-heading;
@@ -41,6 +43,9 @@
     .Services_list {
         margin-top: 3rem;
         position: relative;
-        @include squares-right-block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // @include squares-right-block;
     }
 }

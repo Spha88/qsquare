@@ -5,11 +5,12 @@ $theme-highlight-color: #f77f00;
 $theme-danger-color: #e63946;
 
 @mixin squares-left-heading {
+    position: relative;
+    display: inline-block;
     &:before,
     &:after {
         display: block;
         content: '';
-        z-index: 4;
         position: absolute;
         width: 20%;
         height: 60%;
@@ -34,7 +35,6 @@ $theme-danger-color: #e63946;
     &:after {
         display: block;
         content: '';
-        z-index: 4;
         position: absolute;
         width: 20%;
         height: 20%;
@@ -98,4 +98,10 @@ $theme-danger-color: #e63946;
         left: -10px;
         bottom: -10px;
     }
+}
+
+@mixin dropShadow {
+    -webkit-box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
 }
