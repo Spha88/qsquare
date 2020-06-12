@@ -1,0 +1,27 @@
+.Partners {
+    .Partners_heading {
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        min-width: 70%;
+        width: 700px;
+        margin: auto;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 1.5em;
+    }
+    footer {
+        min-width: 50%;
+        margin: auto;
+        text-align: center;
+        margin-top: 1rem;
+        a {
+            display: inline-block;
+            margin-right: 2rem;
+            &:last-child img {
+                transform: scale(0.85);
+            }
+        }
+    }
+}

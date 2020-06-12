@@ -1,0 +1,10 @@
+@import '../../../variables.scss';
+
+.Heading {
+    text-align: center;
+    font-size: 3.5em;
+    position: relative;
+    background: transparent;
+    display: inline-block;
+    @include squares-left-heading;
+}
