@@ -1,0 +1,38 @@
+@import '../../../variables.scss';
+
+.Service {
+    border: 1px solid $theme-primary-color;
+    margin-bottom: 1rem;
+    header {
+        padding: 20px;
+        cursor: pointer;
+        background: $theme-white-color;
+        h2 {
+            margin: 0;
+            color: $theme-primary-color;
+        }
+    }
+    main {
+        height: 0;
+        overflow: hidden;
+        transition: all 300ms ease;
+        .Service_content {
+            padding: 20px;
+            border-top: 1px solid $theme-primary-color;
+        }
+        &.Open {
+            height: 200px;
+            animation: open 500ms;
+            overflow-y: scroll;
+        }
+    }
+}
+
+@keyframes open {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 200px;
+    }
+}

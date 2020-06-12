@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.Services {
+    .Services_header {
+        position: relative;
+        text-align: center;
+        h1 {
+            margin: 0;
+            position: relative;
+            display: inline-block;
+            @include squares-left-heading;
+        }
+    }
+    .Services_list {
+        margin-top: 3rem;
+    }
+}
