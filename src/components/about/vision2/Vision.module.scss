@@ -1,0 +1,63 @@
+@import '../../../variables.scss';
+
+.Vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    .Card {
+        width: 33%;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        line-height: 1.5em;
+        font-size: 1.2em;
+
+        .Card_img {
+            width: 100%;
+            height: 150px;
+            position: relative;
+            border-bottom: 3px solid $theme-secondary-color;
+            &.Vision_img {
+                background: url('../../../assets/images/vision.jpg') no-repeat
+                    center center;
+                background-size: cover;
+            }
+            &.Mission_img {
+                background: url('../../../assets/images/mission.jpg') no-repeat
+                    center bottom;
+                background-size: cover;
+            }
+            &.Values_img {
+                background: url('../../../assets/images/values.jpg') no-repeat
+                    center center;
+                background-size: cover;
+            }
+            .Card_header_container {
+                position: absolute;
+                bottom: -15px;
+                width: 100%;
+                h2 {
+                    position: relative;
+                    color: $theme-primary-color;
+                    margin: 0;
+                    padding: 10px 40px;
+                    background-color: transparentize(
+                        $color: $theme-primary-color,
+                        $amount: 0
+                    );
+                    color: $theme-white-color;
+                    font-size: 1em;
+                    display: inline;
+                    @include squares-left-vision;
+                }
+            }
+        }
+        .Card_body {
+            padding-top: 20px;
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -3,3 +3,99 @@ $theme-secondary-color: #a9b7c2;
 $theme-white-color: #f1faee;
 $theme-highlight-color: #f77f00;
 $theme-danger-color: #e63946;
+
+@mixin squares-left-heading {
+    &:before,
+    &:after {
+        display: block;
+        content: '';
+        z-index: 4;
+        position: absolute;
+        width: 20%;
+        height: 60%;
+    }
+    &:before {
+        border-right: 1px solid $theme-primary-color;
+        border-top: 1px solid $theme-primary-color;
+        right: -30px;
+        top: -10px;
+    }
+
+    &:after {
+        border-left: 1px solid $theme-primary-color;
+        border-bottom: 1px solid $theme-primary-color;
+        left: -30px;
+        bottom: -10px;
+    }
+}
+
+@mixin squares-block {
+    &:before,
+    &:after {
+        display: block;
+        content: '';
+        z-index: 4;
+        position: absolute;
+        width: 20%;
+        height: 20%;
+    }
+    &:before {
+        border-top: 1px solid $theme-primary-color;
+        top: -10px;
+    }
+
+    &:after {
+        border-bottom: 1px solid $theme-primary-color;
+        bottom: -10px;
+    }
+}
+
+@mixin squares-left-block {
+    @include squares-block;
+    &:before {
+        border-left: 1px solid $theme-primary-color;
+        left: -10px;
+    }
+    &:after {
+        border-right: 1px solid $theme-primary-color;
+        right: -10px;
+    }
+}
+
+@mixin squares-right-block {
+    @include squares-block;
+    &:before {
+        border-right: 1px solid $theme-primary-color;
+        right: -10px;
+    }
+
+    &:after {
+        border-left: 1px solid $theme-primary-color;
+        left: -10px;
+    }
+}
+
+@mixin squares-left-vision {
+    &:before,
+    &:after {
+        display: block;
+        content: '';
+        z-index: 4;
+        position: absolute;
+        width: 20%;
+        height: 60%;
+    }
+    &:before {
+        border-right: 1px solid $theme-highlight-color;
+        border-top: 1px solid $theme-highlight-color;
+        right: -10px;
+        top: -10px;
+    }
+
+    &:after {
+        border-left: 1px solid $theme-primary-color;
+        border-bottom: 1px solid $theme-primary-color;
+        left: -10px;
+        bottom: -10px;
+    }
+}

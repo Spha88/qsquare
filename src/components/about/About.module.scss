@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.About {
+    header {
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        position: relative;
+        background: transparent;
+        display: inline-block;
+        @include squares-left-heading;
+    }
+    .About_content_container {
+        display: flex;
+        .About_img_container {
+            width: 40%;
+            height: 400px;
+            padding: 2rem;
+            .About_img {
+                position: relative;
+                @include squares-left-block;
+                background: url('../../assets/images/data.jpg') no-repeat center
+                    center;
+                background-size: cover;
+                background-color: $theme-primary-color;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .About_content {
+            width: 60%;
+            padding: 2rem;
+            p {
+                font-size: 1em;
+                line-height: 1.7rem;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
