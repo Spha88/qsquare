@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 
+import Header from './components/header/Header';
+
 function App() {
   return (
-    <div><h1>q Squred</h1></div>
+    <div>
+      <Header />
+    </div>
   );
 }
 

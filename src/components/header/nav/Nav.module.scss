@@ -1,0 +1,27 @@
+@import '../../../variables.scss';
+
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    background: $theme-secondary-color;
+    padding: 10px;
+    .Logo {
+        height: 50px;
+        width: 50px;
+        background: $theme-secondary-color url('../../../assets/images/qlogo.png') no-repeat left top;
+        background-size: contain;
+    }
+    .Nav_Items_list {
+        display: flex;
+        list-style: none;
+        li {
+            margin-right: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $theme-primary-color;
+        }
+    }
+}

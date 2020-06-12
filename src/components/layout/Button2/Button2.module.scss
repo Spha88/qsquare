@@ -1,0 +1,50 @@
+@import '../../../variables.scss';
+
+.Button {
+    position: relative;
+    z-index: 2;
+    margin: 5px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: $theme-white-color;
+    font-size: 1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    width: auto;
+    min-width: 200px;
+    min-height: 50px;
+    border: 1px solid $theme-secondary-color;
+    border-radius: 3px;
+    
+    cursor: pointer;
+    transition: all 300ms ease-in;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: all 300ms ease-in;
+        background: $theme-primary-color;
+        bottom: 0;
+        height: 100%;
+        width: 0;
+        z-index: -1;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+    &:hover {
+        &:before {
+            width: 50%;
+        }
+        &:after {
+            width: 50%;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
+}

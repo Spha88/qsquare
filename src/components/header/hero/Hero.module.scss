@@ -1,0 +1,31 @@
+@import '../../../variables.scss';
+.Hero {
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 1300px;
+    margin: 2rem auto;
+    display: flex;
+    height: 400px;
+    .Logo {
+        background: $theme-secondary-color url('../../../assets//images/qsquare_logo.png') no-repeat center center;
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+    }
+    .Info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding: 6%;
+        color: #fff;
+        font-size: 150%;
+        background-color: transparentize($color: $theme-primary-color, $amount: 0.4);
+        p {
+            line-height: 2.5rem;
+            margin: 0 0 2rem 0;
+            font-weight: 300;
+        }
+    }
+}
