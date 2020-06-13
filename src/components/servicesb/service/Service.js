@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './Service.module.scss';
 import Button from '../../layout/Button/Button2';
-import ServiceModal from '../serviceModal/ServiceModal';
+import ServiceModal from '../../layout/serviceModal/ServiceModal';
 
 const Service = ({ service: { image, title, abstract, description } }) => {
     const [openModal, setOpenModal] = useState(false);

@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .About {
+    padding-bottom: 2rem;
     header {
         text-align: center;
     }
@@ -18,7 +19,6 @@
         display: flex;
         .About_img_container {
             width: 40%;
-            height: 400px;
             padding-top: 2rem;
             .About_img {
                 position: relative;
@@ -34,8 +34,9 @@
         .About_content {
             width: 60%;
             padding: 2rem;
+            padding-bottom: 0;
             p {
-                font-size: 1em;
+                font-size: 1.2em;
                 line-height: 1.7rem;
                 &:first-child {
                     margin-top: 0;
