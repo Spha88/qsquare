@@ -30,7 +30,7 @@ const Service = ({ service: { image, title, abstract, description } }) => {
                 />
             </main>
             <footer>
-                <Button label='Read' click={toggleModal} />
+                <Button label='Read More' click={toggleModal} />
             </footer>
 
             <ServiceModal
