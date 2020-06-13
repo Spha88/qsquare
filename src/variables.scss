@@ -88,15 +88,51 @@ $theme-danger-color: #e63946;
     &:before {
         border-right: 1px solid $theme-highlight-color;
         border-top: 1px solid $theme-highlight-color;
-        right: -10px;
-        top: -10px;
+        right: -5px;
+        top: -5px;
     }
 
     &:after {
         border-left: 1px solid $theme-primary-color;
         border-bottom: 1px solid $theme-primary-color;
-        left: -10px;
-        bottom: -10px;
+        left: -5px;
+        bottom: -5px;
+    }
+}
+
+@mixin animate-top-right {
+    animation: animate-squares-top-right 500ms ease;
+    @keyframes animate-squares-top-right {
+        0% {
+            right: -5px;
+            top: -5px;
+        }
+        50% {
+            right: -15px;
+            top: -15px;
+        }
+        100% {
+            right: -5px;
+            top: -5px;
+        }
+    }
+}
+
+@mixin animate-bottom-left {
+    animation: animate-squares-bottom-left 500ms ease;
+    @keyframes animate-squares-bottom-left {
+        0% {
+            left: -5px;
+            bottom: -5px;
+        }
+        50% {
+            left: -15px;
+            bottom: -15px;
+        }
+        100% {
+            left: -5px;
+            bottom: -5px;
+        }
     }
 }
 

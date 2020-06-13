@@ -4,12 +4,27 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+
     .Card {
         width: 32%;
         position: relative;
         text-align: center;
         line-height: 1.5em;
         font-size: 1.2em;
+        &:hover {
+            .Card_img {
+                .Card_header_container {
+                    h2 {
+                        &:before {
+                            @include animate-top-right;
+                        }
+                        &:after {
+                            @include animate-bottom-left;
+                        }
+                    }
+                }
+            }
+        }
 
         .Card_img {
             width: 100%;
