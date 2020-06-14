@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './About.module.scss';
 import Container from '../layout/container/Container';
-import Vision from './vision2/Vision';
+import Vision from './vision/Vision';
 import Button from '../layout/Button/Button2';
 import Modal from '../layout/serviceModal/ServiceModal';
 

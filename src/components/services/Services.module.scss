@@ -1,4 +1,5 @@
-@import '../../variables.scss';
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 
 .Services {
     .Services_header {
@@ -14,18 +15,31 @@
             display: inline-block;
             @include squares-left-heading;
         }
+        @include transition;
+        @media only screen and (max-width: $bp-tablet) {
+            margin-bottom: 1rem;
+        }
     }
     .Services_lead {
         margin: 3rem 0 0 0;
         position: relative;
         display: flex;
         align-items: center;
+        @include transition;
+        @media only screen and (max-width: $bp-tablet) {
+            margin: 1rem 0 0 0;
+        }
         .Services_lead_image {
             background: url('../../assets/images/bg-two.jpg') no-repeat center
                 center;
             background-size: 120%;
             height: 350px;
             width: 50%;
+            @media only screen and (max-width: $bp-mobile) {
+                // height: 100%;
+                width: 100%;
+                display: none;
+            }
         }
         .Services_lead_content {
             padding: 2rem 5rem;
@@ -40,6 +54,22 @@
             line-height: 1.5em;
             text-shadow: 1px 1px 7px $theme-primary-color;
             @include squares-left-block;
+            @include transition;
+            @media only screen and (max-width: $bp-laptop) {
+                font-size: 1.2em;
+            }
+            @media only screen and (max-width: $bp-tablet) {
+                font-size: 1.12em;
+                padding: 1rem 2rem;
+            }
+            @media only screen and (max-width: $bp-mobile) {
+                width: 100%;
+                position: relative;
+                font-size: 1em;
+                padding: 20px 20px;
+                margin: 2rem 15px 15px 15px;
+                text-shadow: none;
+            }
         }
     }
     .Services_list {
@@ -49,5 +79,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
         // @include squares-right-block;
+        @include transition;
+        @media only screen and (max-width: $bp-tablet) {
+            margin-top: 1rem;
+        }
     }
 }

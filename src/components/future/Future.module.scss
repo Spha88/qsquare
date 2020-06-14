@@ -1,8 +1,8 @@
-@import '../../variables.scss';
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 
 .Future {
     margin-top: 3rem;
-
     background: url('../../assets/images/future.jpg') no-repeat center bottom;
     background-attachment: fixed;
     padding: 3rem 0;
@@ -11,12 +11,34 @@
             $color: $theme-white-color,
             $amount: 0.1
         );
-        padding: 5rem;
+        padding: 5rem 7rem;
         h2 {
             font-size: 3em;
+            margin-top: 0;
         }
         main {
             font-size: 1.3em;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @include transition;
+            @include media($bp-laptop) {
+                font-size: 1em;
+            }
         }
+        @include media($bp-tablet) {
+            padding: 4rem;
+            h2 {
+                font-size: 2em;
+            }
+        }
+        @include media($bp-mobile) {
+            padding: 1.5rem;
+        }
+    }
+    @include media($bp-tablet) {
+        padding: 0;
     }
 }

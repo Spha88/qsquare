@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
 
                 <div className={classes.Designer}>
-                    <a href='http://www.netslate.co.za' target='_blank'>
+                    <a href='http://www.netslate.co.za'>
                         Website by <br /> Spha
                     </a>
                 </div>

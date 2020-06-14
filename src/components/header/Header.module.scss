@@ -1,3 +1,6 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
 .Header {
     height: 90vh;
     max-height: 700px;
@@ -5,4 +8,12 @@
     background-size: cover;
     background-position: center center;
     padding: 2rem;
+    @include transition;
+    @media only screen and (max-width: $bp-tablet) {
+        height: 500px;
+    }
+    @media only screen and (max-width: $bp-mobile) {
+        height: auto;
+        padding: 1rem;
+    }
 }

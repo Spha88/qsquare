@@ -4,9 +4,6 @@ const Bio = {
     <p>
     Mzimhle Zuko Mbijekana is the current owner of QSC and brings vast information technology experience, dating back to nearly 20 years ago as a Technical Support technician at the State Information Technology Agency (SITA). Mzimhle worked as a technical consultant for Accenture, contracted to lead the project for the rollout of the Basic Accounting System (BAS), in the Northern Cape Provincial Government.
     </p>
-    <p>
-    At the completion of the BAS implementation project, Mzimhle was appointed as an IT Manager for Northern Cape Provincial Treasury to usher in the establishment of the departmental information technology support unit.
-    </p>
     `,
     fullBio: `
     <p>

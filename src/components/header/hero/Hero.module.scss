@@ -1,11 +1,19 @@
-@import '../../../variables.scss';
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 .Hero {
+    max-width: 1350px;
     margin-top: 3rem;
-    width: 90%;
-    max-width: 1300px;
     margin: 2rem auto;
     display: flex;
     height: 400px;
+    @include transition;
+    @media only screen and (max-width: $bp-tablet) {
+        height: 300px;
+    }
+    @media only screen and (max-width: $bp-mobile) {
+        flex-direction: column;
+        height: auto !important;
+    }
     .Logo {
         background: $theme-secondary-color
             url('../../../assets//images/qsquare_logo.png') no-repeat center
@@ -13,6 +21,17 @@
         background-size: 120%;
         width: 40%;
         height: 100%;
+        @include transition;
+        @media only screen and (max-width: $bp-laptop) {
+            background: $theme-secondary-color
+                url('../../../assets//images/logo_two.png') no-repeat center
+                center;
+            background-size: 110%;
+        }
+        @media only screen and (max-width: $bp-mobile) {
+            height: 300px;
+            width: 100%;
+        }
     }
     .Info {
         position: relative;
@@ -21,16 +40,34 @@
         justify-content: center;
         width: 60%;
         padding: 6%;
-        font-size: 150%;
         background-color: transparentize(
             $color: $theme-primary-color,
             $amount: 0.2
         );
+        @include transition;
         p {
+            font-size: 150%;
             line-height: 2.5rem;
             margin: 0 0 2rem 0;
             font-weight: 300;
             color: $theme-white-color;
+            text-align: center;
+            padding: 0 5rem;
+            @include transition;
+        }
+        @media only screen and (max-width: $bp-laptop) {
+            p {
+                padding: 0;
+            }
+        }
+        @media only screen and (max-width: $bp-tablet) {
+            p {
+                font-size: 1.2em;
+                line-height: 2rem;
+            }
+        }
+        @media only screen and (max-width: $bp-mobile) {
+            width: 100%;
         }
     }
 }

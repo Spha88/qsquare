@@ -3,7 +3,7 @@ import './App.css';
 
 import Header from './components/header/Header';
 import About from './components/about/About';
-import Services from './components/servicesb/Services';
+import Services from './components/services/Services';
 import Partners from './components/partners/Partners';
 import Ownership from './components/ownership/Ownership';
 import Future from './components/future/Future';

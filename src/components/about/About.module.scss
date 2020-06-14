@@ -1,4 +1,5 @@
-@import '../../variables.scss';
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 
 .About {
     padding-bottom: 2rem;
@@ -14,12 +15,22 @@
         background: transparent;
         display: inline-block;
         @include squares-left-heading;
+        @include transition;
+        @media screen and (max-width: $bp-laptop) {
+            font-size: 2.5em;
+        }
     }
     .About_content_container {
         display: flex;
+        @media only screen and (max-width: $bp-mobile) {
+            flex-direction: column;
+        }
         .About_img_container {
             width: 40%;
             padding-top: 2rem;
+            @media only screen and (max-width: $bp-mobile) {
+                width: 100%;
+            }
             .About_img {
                 position: relative;
                 @include squares-left-block;
@@ -29,17 +40,29 @@
                 background-color: $theme-primary-color;
                 height: 100%;
                 width: 100%;
+                @media only screen and (max-width: $bp-mobile) {
+                    height: 200px;
+                }
             }
         }
         .About_content {
             width: 60%;
             padding: 2rem;
             padding-bottom: 0;
+            @media only screen and (max-width: $bp-mobile) {
+                width: 100%;
+                padding: 2rem 0 0;
+            }
             p {
                 font-size: 1.2em;
                 line-height: 1.7rem;
+                @include transition;
                 &:first-child {
                     margin-top: 0;
+                }
+                @media screen and (max-width: $bp-laptop) {
+                    font-size: 1em;
+                    line-height: 1.5rem;
                 }
             }
         }

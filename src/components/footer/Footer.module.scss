@@ -1,4 +1,5 @@
-@import '../../variables.scss';
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 
 .Footer {
     background-color: $theme-primary-color;
@@ -8,6 +9,10 @@
         p {
             color: $theme-secondary-color !important;
             font-size: 1.1em;
+            @include transition;
+            @media only screen and (max-width: $bp-laptop) {
+                font-size: 1em;
+            }
         }
     }
 

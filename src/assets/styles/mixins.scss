@@ -1,8 +1,23 @@
-$theme-primary-color: #013f6e;
-$theme-secondary-color: #a9b7c2;
-$theme-white-color: #f1faee;
-$theme-highlight-color: #f77f00;
-$theme-danger-color: #e63946;
+@mixin squares-bottom-service-card {
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 10%;
+        width: 10%;
+        border-bottom: 1px solid $theme-primary-color;
+    }
+    &:after {
+        border-left: 1px solid $theme-primary-color;
+        left: 0;
+    }
+    &:before {
+        border-right: 1px solid $theme-primary-color;
+        right: 0;
+    }
+}
 
 @mixin squares-left-heading {
     position: relative;
@@ -140,4 +155,28 @@ $theme-danger-color: #e63946;
     -webkit-box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 7px 9px 73px -6px rgba(0, 0, 0, 0.75);
+}
+
+@mixin transition {
+    transition: all 500ms ease-in-out;
+}
+
+/*
+    Media Query
+*/
+
+@mixin media($bp) {
+    @if $bp == 1024px {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $bp == 768px {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $bp == 425px {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
 }
