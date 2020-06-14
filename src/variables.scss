@@ -101,7 +101,7 @@ $theme-danger-color: #e63946;
 }
 
 @mixin animate-top-right {
-    animation: animate-squares-top-right 500ms ease;
+    animation: animate-squares-top-right 600ms ease-in-out;
     @keyframes animate-squares-top-right {
         0% {
             right: -5px;
@@ -119,7 +119,7 @@ $theme-danger-color: #e63946;
 }
 
 @mixin animate-bottom-left {
-    animation: animate-squares-bottom-left 500ms ease;
+    animation: animate-squares-bottom-left 600ms ease-in-out;
     @keyframes animate-squares-bottom-left {
         0% {
             left: -5px;
