@@ -6,6 +6,8 @@ import About from './components/about/About';
 import Services from './components/servicesb/Services';
 import Partners from './components/partners/Partners';
 import Ownership from './components/ownership/Ownership';
+import Future from './components/future/Future';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
             <Services />
             <Ownership />
             <Partners />
+            <Future />
+            <Footer />
         </div>
     );
 }

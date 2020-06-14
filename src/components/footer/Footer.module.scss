@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.Footer {
+    background-color: $theme-primary-color;
+    padding: 3rem 0 1rem;
+    text-align: center;
+    .Footer_content {
+        p {
+            color: $theme-secondary-color !important;
+            font-size: 1.1em;
+        }
+    }
+
+    .Designer {
+        margin-top: 5rem;
+        border-top: 1px solid $theme-secondary-color;
+        padding-top: 20px;
+        a {
+            color: rgb(41, 41, 41);
+            &:hover {
+                color: $theme-white-color;
+            }
+        }
+    }
+}
