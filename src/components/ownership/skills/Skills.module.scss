@@ -1,0 +1,27 @@
+@import '../../../variables.scss';
+
+.Skills {
+    .Skills_content {
+        font-size: 1.1em;
+        .Skills_content_lead {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            line-height: 1.6em;
+        }
+        .Skills_content_list {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                margin-bottom: 0.7em;
+                padding: 0 20px;
+                border-right: 5px solid $theme-secondary-color;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

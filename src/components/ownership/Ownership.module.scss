@@ -1,8 +1,11 @@
+@import '../../variables.scss';
+
 .Ownership {
     header {
         text-align: center;
         h1 {
             font-size: 3em;
+            @include squares-left-heading;
         }
     }
     main {

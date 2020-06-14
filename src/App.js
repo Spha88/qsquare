@@ -13,8 +13,8 @@ function App() {
             <Header />
             <About />
             <Services />
-            <Partners />
             <Ownership />
+            <Partners />
         </div>
     );
 }
