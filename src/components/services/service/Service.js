@@ -4,10 +4,17 @@ import Button from '../../layout/Button/Button2';
 import ServiceModal from '../../layout/serviceModal/ServiceModal';
 
 const Service = ({ service: { image, title, abstract, description } }) => {
-    const [openModal, setOpenModal] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
 
-    const toggleModal = e => {
-        setOpenModal(!openModal);
+    const openModal = e => {
+        setIsOpen(true);
+        setIsClosed(false);
+    };
+
+    const closeModal = e => {
+        setIsOpen(false);
+        setIsClosed(true);
     };
 
     return (
@@ -30,15 +37,15 @@ const Service = ({ service: { image, title, abstract, description } }) => {
                 />
             </main>
             <footer>
-                <Button label='Read More' click={toggleModal} />
+                <Button label='Read More' click={openModal} />
             </footer>
 
             <ServiceModal
                 title={title}
-                image={image}
                 description={description}
-                click={toggleModal}
-                open={openModal}
+                click={closeModal}
+                opened={isOpen}
+                closed={isClosed}
             />
         </div>
     );

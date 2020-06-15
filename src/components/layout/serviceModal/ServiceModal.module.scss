@@ -1,34 +1,8 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/mixins.scss';
 
-.Modal {
-    max-width: 900px;
-    width: 90%;
-    max-height: 95%;
-    color: $theme-primary-color;
-    background: $theme-white-color;
-    padding: 1rem;
-    overflow-y: auto;
-    @include dropShadow;
-    .Modal_header {
-        text-align: center;
-        padding-top: 2rem;
-        h1 {
-            margin: 0;
-            padding: 0;
-            @include squares-left-heading;
-        }
-    }
-    .Modal_body {
-        div {
-            padding: 2rem;
-            font-size: 1.2em;
-            line-height: 1.6em;
-        }
-    }
-}
-
 .Backdrop {
+    display: none;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -50,6 +24,33 @@
         animation: close 1000ms ease;
         opacity: 0;
         z-index: -100;
+        display: none;
+    }
+    .Modal {
+        max-width: 900px;
+        width: 90%;
+        max-height: 95%;
+        color: $theme-primary-color;
+        background: $theme-white-color;
+        padding: 1rem;
+        overflow-y: auto;
+        @include dropShadow;
+        .Modal_header {
+            text-align: center;
+            padding-top: 2rem;
+            h1 {
+                margin: 0;
+                padding: 0;
+                @include squares-left-heading;
+            }
+        }
+        .Modal_body {
+            div {
+                padding: 2rem;
+                font-size: 1.2em;
+                line-height: 1.6em;
+            }
+        }
     }
 }
 
@@ -70,6 +71,7 @@
 
 @keyframes close {
     0% {
+        display: block;
         z-index: 100;
         opacity: 1;
     }
@@ -80,5 +82,6 @@
     100% {
         z-index: -100;
         opacity: 0;
+        display: none;
     }
 }

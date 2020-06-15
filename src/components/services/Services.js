@@ -24,8 +24,6 @@ const Services = () => {
         };
     });
 
-    console.log(myServices);
-
     return (
         <Container>
             <div className={classes.Services}>

@@ -6,11 +6,19 @@ import Button from '../layout/Button/Button2';
 import Modal from '../layout/serviceModal/ServiceModal';
 
 const About = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
 
-    const toggleModal = e => {
-        setOpenModal(!openModal);
+    const openModal = e => {
+        setIsOpen(true);
+        setIsClosed(false);
     };
+
+    const closeModal = e => {
+        setIsOpen(false);
+        setIsClosed(true);
+    };
+
     return (
         <Container>
             <div className={classes.About}>
@@ -25,14 +33,15 @@ const About = () => {
                         <div
                             dangerouslySetInnerHTML={{ __html: extract }}
                         ></div>
-                        <Button label='Read More' click={toggleModal} />
+                        <Button label='Read More' click={openModal} />
                     </div>
                 </div>
             </div>
 
             <Modal
-                click={toggleModal}
-                open={openModal}
+                click={closeModal}
+                opened={isOpen}
+                closed={isClosed}
                 title='About Q-Squared Concepts'
                 description={fullText}
             />

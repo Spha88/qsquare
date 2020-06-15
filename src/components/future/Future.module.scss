@@ -6,6 +6,9 @@
     background: url('../../assets/images/future.jpg') no-repeat center bottom;
     background-attachment: fixed;
     padding: 3rem 0;
+    @include media($bp-tablet) {
+        background-attachment: initial;
+    }
     .Future_content {
         background-color: transparentize(
             $color: $theme-white-color,

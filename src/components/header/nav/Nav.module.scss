@@ -8,6 +8,7 @@
     max-width: 1350px;
     margin: auto;
     background: $theme-secondary-color;
+    position: relative;
     .Logo {
         height: 50px;
         width: 50px;
@@ -33,7 +34,8 @@
             position: relative;
             display: flex;
             align-items: center;
-            font-weight: bold;
+            font-size: 0.95em;
+            font-weight: 400;
             text-transform: uppercase;
             height: 100%;
             color: $theme-primary-color;
@@ -56,8 +58,15 @@
                 }
             }
         }
+        @include media($bp-mobile) {
+            display: none;
+        }
     }
-    @media only screen and (max-width: 500px) {
-        display: none;
+    @include media($bp-mobile) {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 50;
     }
 }
