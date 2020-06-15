@@ -10,7 +10,7 @@ import Ndalo_logo from '../../assets/images/ndalo_logo.png';
 const Partners = () => {
     return (
         <Container>
-            <div className={classes.Partners}>
+            <div className={classes.Partners} id='partners'>
                 <header className={classes.Partners_heading}>
                     <Heading>Our Partners</Heading>
                 </header>

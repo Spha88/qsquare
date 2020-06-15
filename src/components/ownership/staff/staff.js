@@ -6,11 +6,19 @@ import Modal from '../../layout/serviceModal/ServiceModal';
 import Bio from './biography';
 
 const About = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
 
-    const toggleModal = e => {
-        setOpenModal(!openModal);
+    const openModal = e => {
+        setIsOpen(true);
+        setIsClosed(false);
     };
+
+    const closeModal = e => {
+        setIsOpen(false);
+        setIsClosed(true);
+    };
+
     return (
         <div className={classes.Staff}>
             <div className={classes.Staff_content_container}>
@@ -27,7 +35,7 @@ const About = () => {
                         <div className={classes.Button_container}>
                             <Button
                                 label='More about the owner'
-                                click={toggleModal}
+                                click={openModal}
                             />
                         </div>
                     </div>
@@ -35,8 +43,9 @@ const About = () => {
             </div>
 
             <Modal
-                click={toggleModal}
-                open={openModal}
+                click={closeModal}
+                opened={isOpen}
+                closed={isClosed}
                 title='Mzimhle Zuko Mbijekana'
                 description={Bio.fullBio}
             />

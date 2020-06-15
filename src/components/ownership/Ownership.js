@@ -7,7 +7,7 @@ import Skills from './skills/Skills';
 const Ownership = () => {
     return (
         <Container>
-            <div className={classes.Ownership}>
+            <div className={classes.Ownership} id='ownership'>
                 <header>
                     <h1>Ownership</h1>
                 </header>

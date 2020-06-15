@@ -26,7 +26,7 @@ const Services = () => {
 
     return (
         <Container>
-            <div className={classes.Services}>
+            <div className={classes.Services} id='services'>
                 <header className={classes.Services_header}>
                     <h1>Services</h1>
                 </header>

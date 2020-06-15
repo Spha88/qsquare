@@ -56,6 +56,10 @@
             padding: 0 5rem;
             @include transition;
         }
+        a {
+            width: 100%;
+            text-align: center;
+        }
         @media only screen and (max-width: $bp-laptop) {
             p {
                 padding: 0;

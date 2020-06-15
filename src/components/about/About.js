@@ -21,7 +21,7 @@ const About = () => {
 
     return (
         <Container>
-            <div className={classes.About}>
+            <div className={classes.About} id='about'>
                 <header>
                     <h1>About Us</h1>
                 </header>

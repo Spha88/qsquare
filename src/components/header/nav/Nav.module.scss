@@ -1,72 +1,88 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/mixins.scss';
 
-.Nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1350px;
-    margin: auto;
-    background: $theme-secondary-color;
-    position: relative;
-    .Logo {
-        height: 50px;
-        width: 50px;
-        margin: 10px;
-        background: $theme-secondary-color
-            url('../../../assets/images/qlogo.png') no-repeat left top;
-        background-size: contain;
-        @include transition;
-        @media only screen and (max-width: $bp-tablet) {
-            height: 40px;
-            width: 40px;
-            margin: 5px;
-        }
-    }
-    .Nav_Items_list {
+.NavContainer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    background-color: $theme-secondary-color;
+    .Nav {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        list-style: none;
-        margin: 0;
-        height: 68px;
-        li {
-            padding: 0 20px;
-            position: relative;
+        max-width: 1350px;
+        width: 100%;
+        margin: auto;
+        background: $theme-secondary-color;
+        position: relative;
+        .Logo {
+            height: 50px;
+            width: 50px;
+            margin: 10px 10px 10px 20px;
+            background: $theme-secondary-color
+                url('../../../assets/images/qlogo.png') no-repeat left top;
+            background-size: contain;
+            @include transition;
+            @media only screen and (max-width: $bp-tablet) {
+                height: 40px;
+                width: 40px;
+                margin: 5px;
+            }
+        }
+        .Nav_Items_list {
             display: flex;
             align-items: center;
-            font-size: 0.95em;
-            font-weight: 400;
-            text-transform: uppercase;
-            height: 100%;
-            color: $theme-primary-color;
-            @include transition;
-            &:last-child {
-                padding-right: 40px;
-            }
-            &:hover {
-                color: $theme-highlight-color;
-                cursor: pointer;
-                background-color: $theme-white-color;
-            }
-        }
-        @media only screen and (max-width: $bp-tablet) {
-            height: 50px;
+            list-style: none;
+            margin: 0;
+            height: 68px;
             li {
-                padding: 0 10px;
-                &:last-child {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                a {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
                     padding: 0 20px;
+                    align-items: center;
+                    font-size: 0.95em;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    @include transition;
+                    &.active {
+                        background: $theme-primary-color;
+                        color: $theme-white-color !important;
+                    }
+                    @include media($bp-tablet) {
+                        padding: 0 5px;
+                    }
+                }
+                @include transition;
+                &:last-child {
+                    padding-right: 40px;
+                }
+                &:hover {
+                    color: $theme-white-color;
+                    cursor: pointer;
+                    background: $theme-primary-color;
                 }
             }
+            @media only screen and (max-width: $bp-tablet) {
+                height: 50px;
+                li {
+                    padding: 0 10px;
+                    &:last-child {
+                        padding: 0 20px;
+                    }
+                }
+            }
+            @include media($bp-mobile) {
+                display: none;
+            }
         }
-        @include media($bp-mobile) {
-            display: none;
-        }
-    }
-    @include media($bp-mobile) {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 50;
     }
 }

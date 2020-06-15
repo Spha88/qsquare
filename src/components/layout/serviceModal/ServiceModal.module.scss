@@ -42,13 +42,20 @@
                 margin: 0;
                 padding: 0;
                 @include squares-left-heading;
+                @include transition;
+                @include media($bp-mobile) {
+                    font-size: 1.5rem;
+                }
             }
         }
         .Modal_body {
             div {
                 padding: 2rem;
-                font-size: 1.2em;
                 line-height: 1.6em;
+                @include transition;
+                @include media($bp-mobile) {
+                    padding: 1rem;
+                }
             }
         }
     }
@@ -76,6 +83,7 @@
         opacity: 1;
     }
     90% {
+        display: block;
         z-index: 100;
         opacity: 0;
     }

@@ -1,33 +1,38 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import classes from './Nav.module.scss';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
 import MobileNav from '../MobileNav/MobileNav';
+import NavItems from '../navItems';
 
 const Nav = () => {
     let [openNav, setOpenNav] = useState(false);
-
     const toggleMobileNav = () => setOpenNav(!openNav);
 
     return (
-        <nav className={classes.Nav}>
-            <div className={classes.Logo}></div>
-            <ul className={classes.Nav_Items_list}>
-                <li>
-                    <a href='#!'>About</a>
-                </li>
-                <li>
-                    <a href='#!'>Services</a>
-                </li>
-                <li>
-                    <a href='#!'>Partners</a>
-                </li>
-                <li>
-                    <a href='#!'>Contact Us</a>
-                </li>
-            </ul>
-            <MobileNav open={openNav} />
-            <BurgerIcon open={openNav} openMobileNav={toggleMobileNav} />
-        </nav>
+        <div className={classes.NavContainer}>
+            <nav className={classes.Nav}>
+                <div className={classes.Logo}></div>
+                <ul className={classes.Nav_Items_list}>
+                    {NavItems.map(navItem => (
+                        <li>
+                            <Link
+                                to={navItem.id}
+                                duration={1000}
+                                smooth={true}
+                                offset={-50}
+                                spy={true}
+                                activeClass={classes.active}
+                            >
+                                <span>{navItem.label}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <MobileNav open={openNav} closeNav={toggleMobileNav} />
+                <BurgerIcon open={openNav} openMobileNav={toggleMobileNav} />
+            </nav>
+        </div>
     );
 };
 
