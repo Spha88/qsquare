@@ -10,9 +10,9 @@ const hero = () => {
             <div className={classes.Logo}></div>
             <div className={classes.Info}>
                 <p>
-                    Our greatest passion is in <br />
-                    helping our clients to transition from a predominantly
-                    offline business to a fully automated entity.
+                    Our greatest passion lies in facilitating our clients’
+                    transition from being a predominantly offline business to a
+                    fully automated entity.
                 </p>
 
                 <Link to='about' duration={500} smooth={true} offset={-50}>
