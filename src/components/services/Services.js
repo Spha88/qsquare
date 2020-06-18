@@ -8,6 +8,7 @@ import marketing_bg from '../../assets/images/digital_marketing.jpg';
 import ict_services_bg from '../../assets/images/ict_services.jpg';
 import it_performance_bg from '../../assets/images/it_performance.jpg';
 import engineering from '../../assets/images/software_engineering.jpg';
+import sars_registration from '../../assets/images/smme_bg.jpg';
 
 const Services = () => {
     let bg_images = [
@@ -15,6 +16,7 @@ const Services = () => {
         ict_services_bg,
         it_performance_bg,
         engineering,
+        sars_registration,
     ];
 
     const myServices = service_list.map((service, index) => {

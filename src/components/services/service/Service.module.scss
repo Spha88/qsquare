@@ -26,6 +26,9 @@
         justify-content: center;
         position: relative;
         border-bottom: 3px solid $theme-highlight-color;
+        // border-top: 1px solid $theme-secondary-color;
+        // border-left: 1px solid $theme-secondary-color;
+        // border-right: 1px solid $theme-secondary-color;
         @include transition;
         @media only screen and (max-width: $bp-tablet) {
             height: 150px;
