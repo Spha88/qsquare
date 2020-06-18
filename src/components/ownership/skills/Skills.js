@@ -19,9 +19,8 @@ const Skills = () => {
                         <li>IT Operations Management</li>
                         <li>IT Resources Planning</li>
                         <li>
-                            Project Management (government transversal systems{' '}
-                            <br /> – BAS, PERSAL, LOGIS and eDNA Biometric
-                            system)
+                            Project Management (government transversal systems –
+                            BAS, PERSAL, LOGIS and eDNA Biometric system)
                         </li>
                         <li>Network Management and Support</li>
                         <li>

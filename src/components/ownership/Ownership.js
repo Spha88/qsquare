@@ -19,7 +19,6 @@ const Ownership = () => {
                         </p>
                     </div>
                 </main>
-                <Staff />
                 <Skills />
             </div>
         </Container>

@@ -4,7 +4,7 @@ import classes from './Nav.module.scss';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
 import BurgerIconDesktop from '../BurgerIconDesktop/BurgerIcon';
 import MobileNav from '../MobileNav/MobileNav';
-import NavItems from '../NavItems/NavItems';
+import DesktopNav from '../DesktopNav/DesktopNav';
 
 const Nav = () => {
     let [openMobileNav, setOpenMobileNav] = useState(false);
@@ -20,8 +20,10 @@ const Nav = () => {
                     className={classes.Logo}
                     onClick={() => scroll.scrollToTop()}
                 ></div>
-                <NavItems />
+
+                <DesktopNav open={showDeskTopNav} closeNav={toggleDesktopNav} />
                 <MobileNav open={openMobileNav} closeNav={toggleMobileNav} />
+
                 <BurgerIconDesktop
                     open={showDeskTopNav}
                     openDesktopNav={toggleDesktopNav}

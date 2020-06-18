@@ -1,0 +1,83 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.DesktopNavContainer {
+    display: flex;
+    justify-content: center;
+    @include transition;
+    @include media($bp-mobile) {
+        display: none;
+    }
+    .Slogan {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        cursor: pointer;
+        @include transition;
+    }
+    .DesktopNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -120%;
+        list-style: none;
+        margin: 0;
+        height: 68px;
+        @include transition;
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                padding: 0 20px;
+                align-items: center;
+                font-size: 0.95em;
+                font-weight: 400;
+                text-transform: uppercase;
+                @include transition;
+                &.active {
+                    background: $theme-primary-color;
+                    color: $theme-white-color !important;
+                }
+                @include media($bp-tablet) {
+                    padding: 0 5px;
+                }
+            }
+            @include transition;
+            &:last-child {
+                padding-right: 40px;
+            }
+            &:hover {
+                color: $theme-white-color;
+                cursor: pointer;
+                background: $theme-primary-color;
+            }
+        }
+        @media only screen and (max-width: $bp-tablet) {
+            height: 50px;
+            li {
+                padding: 0 10px;
+                &:last-child {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    .Open {
+        display: flex;
+        top: 0;
+    }
+    .Hide {
+        top: -120%;
+    }
+}
