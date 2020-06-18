@@ -4,8 +4,11 @@
 .Container {
     max-width: 1350px;
     margin: auto;
-    padding: 2rem 2rem;
+    padding: 2rem 0;
     @include transition;
+    @include media($bp-laptop) {
+        padding: 2rem 2rem;
+    }
     @include media($bp-mobile) {
         padding: 2rem 1rem;
     }
