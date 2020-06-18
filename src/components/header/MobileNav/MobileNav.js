@@ -8,7 +8,7 @@ const MobileNav = ({ open, closeNav }) => {
         <nav className={`${classes.MobileNav} ${open && classes.OpenNav}`}>
             <ul>
                 {NavItems.map(navItem => (
-                    <li>
+                    <li key={navItem.id}>
                         <Link
                             to={navItem.id}
                             duration={1000}

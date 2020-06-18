@@ -16,7 +16,7 @@ const DesktopNav = ({ open, closeNav }) => {
         <div className={classes.DesktopNavContainer}>
             <ul className={dnClasses.join(' ')}>
                 {navItems.map(navItem => (
-                    <li>
+                    <li key={navItem.id}>
                         <Link
                             to={navItem.id}
                             duration={1000}

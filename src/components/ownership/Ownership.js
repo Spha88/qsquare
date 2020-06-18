@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Ownership.module.scss';
 import Container from '../layout/container/Container';
-import Staff from './staff/staff';
 import Skills from './skills/Skills';
 
 const Ownership = () => {

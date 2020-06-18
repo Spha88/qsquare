@@ -54,9 +54,6 @@
                 }
             }
             @include transition;
-            &:last-child {
-                padding-right: 40px;
-            }
             &:hover {
                 color: $theme-white-color;
                 cursor: pointer;
