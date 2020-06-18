@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import classes from './Nav.module.scss';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
 import MobileNav from '../MobileNav/MobileNav';
-import NavItems from '../navItems';
+import NavItems from '../NavItems/NavItems';
 
 const Nav = () => {
     let [openNav, setOpenNav] = useState(false);
@@ -16,22 +16,7 @@ const Nav = () => {
                     className={classes.Logo}
                     onClick={() => scroll.scrollToTop()}
                 ></div>
-                <ul className={classes.Nav_Items_list}>
-                    {NavItems.map(navItem => (
-                        <li>
-                            <Link
-                                to={navItem.id}
-                                duration={1000}
-                                smooth={true}
-                                offset={-100}
-                                spy={true}
-                                activeClass={classes.active}
-                            >
-                                <span>{navItem.label}</span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <NavItems />
                 <MobileNav open={openNav} closeNav={toggleMobileNav} />
                 <BurgerIcon open={openNav} openMobileNav={toggleMobileNav} />
             </nav>
