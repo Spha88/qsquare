@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.Services_list {
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // @include squares-right-block;
+    @include transition;
+    @media only screen and (max-width: $bp-tablet) {
+        margin-top: 1rem;
+    }
+}

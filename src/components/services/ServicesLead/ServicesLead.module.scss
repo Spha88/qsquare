@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.Services_lead {
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include transition;
+    @media only screen and (max-width: $bp-tablet) {
+        margin: 1rem 0 0 0;
+    }
+    .Services_lead_image {
+        background: $theme-primary-color
+            url('../../../assets/images/services_bg.png') no-repeat right bottom;
+        background-size: cover;
+        height: 500px;
+        width: 50%;
+        @media only screen and (max-width: $bp-tablet) {
+            display: none;
+        }
+    }
+    .Services_lead_content {
+        padding: 2rem 5rem;
+        width: 70%;
+        right: 0;
+        position: absolute;
+        margin: 10px;
+        background: transparentize($color: $theme-white-color, $amount: 0.1);
+        line-height: 1.5em;
+        // text-shadow: 1px 1px 7px $theme-primary-color;
+        @include squares-left-block;
+        @include transition;
+        @media only screen and (max-width: $bp-tablet) {
+            padding: 1rem 2rem;
+            position: relative;
+            width: 100%;
+        }
+        @media only screen and (max-width: $bp-mobile) {
+            width: 100%;
+            position: relative;
+            font-size: 1em;
+            padding: 20px 20px;
+            margin: 2rem 15px 15px 15px;
+            text-shadow: none;
+        }
+    }
+}
