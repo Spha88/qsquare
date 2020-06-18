@@ -25,10 +25,15 @@
                 url('../../../assets/images/qlogo.png') no-repeat left top;
             background-size: contain;
             @include transition;
+            transform: scale(1);
             @media only screen and (max-width: $bp-tablet) {
                 height: 40px;
                 width: 40px;
                 margin: 5px;
+            }
+            &:hover {
+                cursor: pointer;
+                animation: animateLogo 500ms ease-in-out;
             }
         }
         .Nav_Items_list {
@@ -84,5 +89,17 @@
                 display: none;
             }
         }
+    }
+}
+
+@keyframes animateLogo {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
