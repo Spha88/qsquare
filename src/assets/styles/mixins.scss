@@ -43,6 +43,14 @@
         left: -30px;
         bottom: -10px;
     }
+    @include media($bp-mobile) {
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
 }
 
 @mixin squares-block {
