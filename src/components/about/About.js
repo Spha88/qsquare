@@ -54,48 +54,25 @@ const About = () => {
 export default About;
 
 const extract = `
-    <p>
-    Q-Squared Concepts (Pty) Ltd (QSC), is a micro ICT
-    advisory and consultancy with a special focus on
-    Internet/Digital Marketing, ICT Support Services, IT
-    Performance Management and Software Engineering.
+<p>
+Our company is an ICT advisory and consultancy with a special focus on Internet and Digital Marketing, Technical Support Services, ICT Performance Management and Software Engineering.
 </p>
 <p>
-    Our greatest passion is in helping our clients to
-    transition from a predominantly offline business to
-    a fully automated entity. We develop bespoke
-    technology solutions in areas such as IT Governance,
-    Cyber Security and Online Business Applications
-    Development.
+We avidly develop bespoke technology solutions in areas such as IT Governance, Cyber Security and Online Business Applications.
 </p>
     `;
 
 const fullText = `
 <p>
-    Q-Squared Concepts (Pty) Ltd (QSC), is a micro ICT
-    advisory and consultancy with a special focus on
-    Internet/Digital Marketing, ICT Support Services, IT
-    Performance Management and Software Engineering.
+Our company is an ICT advisory and consultancy with a special focus on Internet and Digital Marketing, Technical Support Services, ICT Performance Management and Software Engineering.
 </p>
 <p>
-    Our greatest passion is in helping our clients to
-    transition from a predominantly offline business to
-    a fully automated entity. We develop bespoke
-    technology solutions in areas such as IT Governance,
-    Cyber Security and Online Business Applications
-    Development.
+We avidly develop bespoke technology solutions in areas such as IT Governance, Cyber Security and Online Business Applications.
 </p>
 <p>
-With the advent of Internet of Things (IOT), and the
-much publicised Fourth Industrial Revolution (4IR),
-information technology solutions can no longer be
-delivered in the conventional way. It is for this
-reason that we drive virtualised solutions designed
-to extend, but not eliminate, human involvement.
+With the advent of Internet of Things (IOT), and the much publicised Fourth Industrial Revolution (4IR), information technology solutions can no longer be delivered in an orthodox fashion. It is for aforementioned reason that we drive virtualised solutions designed to extend, but not eliminate human involvement, while delivering even better value for the customer.
 </p>
 <p>
-The supreme goal of all our operations, as implied
-in our mission statement, is to maximise value for
-all our stakeholders.
+The supreme goal of all our operations is to maximise financial and sentimental value for all our stakeholders.
 </p>
 `;
