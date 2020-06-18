@@ -7,16 +7,25 @@ const Footer = () => {
         <div className={classes.Footer} id='contact'>
             <Container>
                 <div className={classes.Footer_content}>
-                    <p>76 Tieroog Street Kathu 8446</p>
-                    <p>Email: info@q-sqaured.co.za</p>
-                    <p>Facebook: @qsquaredconcepts </p>
-                    <p>Tel: 082 556 9878</p>
+                    <ul>
+                        <li>
+                            76 Tieroog Street
+                            <span className={classes.Town}>Kathu</span>8446
+                        </li>
+                        <li>
+                            <span>Email:</span> info@q-sqaured.co.za
+                        </li>
+                        <li>
+                            <span>Facebook:</span> @qsquaredconcepts{' '}
+                        </li>
+                        <li>
+                            <span>Tel:</span> 082 556 9878
+                        </li>
+                    </ul>
                 </div>
 
                 <div className={classes.Designer}>
-                    <a href='http://www.netslate.co.za'>
-                        Website by <br /> Spha
-                    </a>
+                    <a href='http://www.netslate.co.za'>Website by Spha</a>
                 </div>
             </Container>
         </div>

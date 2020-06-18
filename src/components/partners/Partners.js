@@ -3,7 +3,6 @@ import React from 'react';
 import Container from '../layout/container/Container';
 import Heading from '../layout/Heading/Heading';
 import classes from './Partners.module.scss';
-
 import Hailer_logo from '../../assets/images/hailer_logo.png';
 import Ndalo_logo from '../../assets/images/ndalo_logo.png';
 

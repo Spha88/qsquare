@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import classes from './Nav.module.scss';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
 import MobileNav from '../MobileNav/MobileNav';
@@ -12,7 +12,10 @@ const Nav = () => {
     return (
         <div className={classes.NavContainer}>
             <nav className={classes.Nav}>
-                <div className={classes.Logo}></div>
+                <div
+                    className={classes.Logo}
+                    onClick={() => scroll.scrollToTop()}
+                ></div>
                 <ul className={classes.Nav_Items_list}>
                     {NavItems.map(navItem => (
                         <li>
