@@ -17,6 +17,10 @@
         margin: auto;
         background: $theme-secondary-color;
         position: relative;
+        @include transition;
+        @include media($bp-mobile) {
+            padding: 0 3px 0 12px;
+        }
         .Logo {
             height: 50px;
             width: 50px;
