@@ -3,7 +3,7 @@
 
 .Backdrop {
     display: none;
-    position: fixed;
+    position: fixed !important;
     display: flex;
     justify-content: center;
     align-items: center;

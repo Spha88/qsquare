@@ -1,0 +1,44 @@
+@import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/mixins.scss';
+
+.Slide {
+    background: $theme-white-color;
+    display: inline-block;
+    width: 550px;
+    margin-right: 50px;
+    &:hover {
+        .SlideImageContainer {
+            .SlideImage {
+                transform: scale(1.1) rotate(1deg);
+            }
+        }
+    }
+    @include media($bp-tablet) {
+        width: 400px;
+    }
+    @include media($bp-mobile) {
+        width: 350px;
+        margin-right: 15px;
+    }
+    .SlideImageContainer {
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        .SlideImage {
+            height: 100%;
+            width: 100%;
+            background: $theme-primary-color no-repeat center center;
+            background-size: cover;
+            @include transition;
+        }
+    }
+    .SlideContentContainer {
+        padding: 2rem;
+        h2 {
+            margin-top: 0;
+        }
+        .SlideContent {
+            line-height: 1.5em;
+        }
+    }
+}

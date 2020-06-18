@@ -3,7 +3,8 @@ import classes from './Services.module.scss';
 import Container from '../layout/container/Container';
 import service_list from './service_list';
 import ServicesLead from './ServicesLead/ServicesLead';
-import ServicesList from './ServicesList/ServicesList';
+import SlideShow from './SlideShow/SlideShow';
+// import ServicesList from './ServicesList/ServicesList';
 
 import marketing_bg from '../../assets/images/digital_marketing.jpg';
 import ict_services_bg from '../../assets/images/ict_services.jpg';
@@ -28,16 +29,18 @@ const Services = () => {
     });
 
     return (
-        <Container>
-            <div className={classes.Services} id='services'>
-                <header className={classes.Services_header}>
-                    <h1>Services</h1>
-                </header>
+        <React.Fragment>
+            <Container>
+                <div className={classes.Services} id='services'>
+                    <header className={classes.Services_header}>
+                        <h1>Services</h1>
+                    </header>
 
-                <ServicesLead />
-                <ServicesList services={myServices} />
-            </div>
-        </Container>
+                    <ServicesLead />
+                </div>
+            </Container>
+            <SlideShow services={myServices} />
+        </React.Fragment>
     );
 };
 
