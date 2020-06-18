@@ -3,9 +3,9 @@
 
 .Services {
     .Services_header {
+        padding-bottom: 3rem;
         position: relative;
         text-align: center;
-        margin-bottom: 4rem;
         h1 {
             margin: 0;
             font-size: 3em;
@@ -16,12 +16,12 @@
             @include squares-left-heading;
         }
         @include transition;
-        @media only screen and (max-width: $bp-tablet) {
-            margin-bottom: 1rem;
+        @include media($bp-mobile) {
+            padding-bottom: 1rem;
         }
     }
     .Services_lead {
-        margin: 3rem 0 0 0;
+        margin: 0;
         position: relative;
         display: flex;
         align-items: center;
@@ -30,14 +30,13 @@
             margin: 1rem 0 0 0;
         }
         .Services_lead_image {
-            background: url('../../assets/images/bg-two.jpg') no-repeat center
-                center;
-            background-size: 120%;
-            height: 350px;
+            background: $theme-primary-color
+                url('../../assets/images/services_bg.png') no-repeat right
+                bottom;
+            background-size: cover;
+            height: 500px;
             width: 50%;
-            @media only screen and (max-width: $bp-mobile) {
-                // height: 100%;
-                width: 100%;
+            @media only screen and (max-width: $bp-tablet) {
                 display: none;
             }
         }
@@ -46,21 +45,19 @@
             width: 70%;
             right: 0;
             position: absolute;
+            margin: 10px;
             background: transparentize(
                 $color: $theme-white-color,
                 $amount: 0.1
             );
-            font-size: 1.5em;
             line-height: 1.5em;
-            text-shadow: 1px 1px 7px $theme-primary-color;
+            // text-shadow: 1px 1px 7px $theme-primary-color;
             @include squares-left-block;
             @include transition;
-            @media only screen and (max-width: $bp-laptop) {
-                font-size: 1.2em;
-            }
             @media only screen and (max-width: $bp-tablet) {
-                font-size: 1.12em;
                 padding: 1rem 2rem;
+                position: relative;
+                width: 100%;
             }
             @media only screen and (max-width: $bp-mobile) {
                 width: 100%;
