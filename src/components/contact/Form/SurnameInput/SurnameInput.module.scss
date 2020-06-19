@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/variables.scss';
+
+.FormControl {
+    margin: 1rem 0;
+    color: $theme-primary-color;
+    label {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+    input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $theme-primary-color;
+        padding: 10px;
+        font-size: 17px;
+    }
+}

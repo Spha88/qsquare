@@ -1,0 +1,12 @@
+@import '../../assets/styles/variables.scss';
+
+.Contact {
+    padding-bottom: 4rem;
+    .Header {
+        text-align: center;
+    }
+    .ContactBody {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

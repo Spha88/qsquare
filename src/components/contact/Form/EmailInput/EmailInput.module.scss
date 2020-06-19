@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/variables.scss';
+
+.FormControl {
+    label {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+    input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid
+            transparentize($color: $theme-primary-color, $amount: 0.5);
+        padding: 10px;
+        font-size: 17px;
+        color: $theme-primary-color;
+        background-color: #fff;
+        &:focus {
+            color: $theme-primary-color;
+        }
+    }
+}

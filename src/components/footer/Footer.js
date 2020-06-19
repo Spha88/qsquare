@@ -4,7 +4,7 @@ import classes from './Footer.module.scss';
 
 const Footer = () => {
     return (
-        <div className={classes.Footer} id='contact'>
+        <div className={classes.Footer} id='footer'>
             <Container>
                 <div className={classes.Footer_content}>
                     <ul>
@@ -14,7 +14,7 @@ const Footer = () => {
                                 title='Email us'
                             >
                                 <i
-                                    class='fa fa-envelope fa-lag'
+                                    className='fa fa-envelope fa-lag'
                                     aria-hidden='true'
                                 ></i>
                             </a>
@@ -25,7 +25,7 @@ const Footer = () => {
                                 title='Visit our Facebook page'
                             >
                                 <i
-                                    class='fa fa-facebook-square fa-lg'
+                                    className='fa fa-facebook-square fa-lg'
                                     aria-hidden='true'
                                 ></i>
                             </a>
@@ -37,7 +37,7 @@ const Footer = () => {
                                 title='Send a message on Whatsapp'
                             >
                                 <i
-                                    class='fa fa-whatsapp fa-lg'
+                                    className='fa fa-whatsapp fa-lg'
                                     aria-hidden='true'
                                 ></i>{' '}
                             </a>

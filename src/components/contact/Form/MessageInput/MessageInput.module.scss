@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/mixins.scss';
+
+.FormControl {
+    margin: 1rem 0;
+    color: $theme-primary-color;
+    label {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+    textarea {
+        display: block;
+        resize: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid
+            transparentize($color: $theme-primary-color, $amount: 0.5);
+        padding: 10px;
+        font-size: 17px;
+        @include transition;
+        color: $theme-primary-color;
+        option {
+            @include transition;
+            padding: 20px;
+            color: $theme-primary-color;
+        }
+    }
+}

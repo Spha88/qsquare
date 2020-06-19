@@ -1,0 +1,14 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.ContactForm {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    @include dropShadow;
+    input,
+    select,
+    textarea {
+        font-family: inherit;
+    }
+}

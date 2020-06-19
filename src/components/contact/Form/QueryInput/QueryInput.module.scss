@@ -1,0 +1,26 @@
+@import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/mixins.scss';
+
+.FormControl {
+    margin: 1rem 0;
+    color: $theme-primary-color;
+    label {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+    select {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid
+            transparentize($color: $theme-primary-color, $amount: 0.5);
+        padding: 10px;
+        font-size: 17px;
+        color: $theme-primary-color;
+        option {
+            color: $theme-primary-color;
+            font-size: 0.9em;
+        }
+    }
+}
