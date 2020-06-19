@@ -1,75 +1,78 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/mixins.scss';
 
-.SlideShow {
-    // border: 1px solid magenta;
-    overflow: hidden;
+.SlideShowContainer {
     width: 100%;
-    max-width: 1350px;
-    margin: 0 auto 5rem;
-    overflow: visible;
-    position: relative;
-    height: 450px;
-    @include media($bp-laptop) {
-        padding-left: 1rem;
-        // overflow-x: hidden;
-    }
-    @include media($bp-tablet) {
-        height: 500px;
-    }
-    .SlideInner {
-        height: auto;
-        margin: auto;
-        display: flex;
+    overflow: hidden;
+    .SlideShow {
         overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
+        width: 100%;
+        max-width: 1350px;
+        margin: 0 auto 5rem;
+        overflow: visible;
+        position: relative;
+        height: 450px;
         @include media($bp-laptop) {
-            padding-left: 2rem;
+            padding-left: 1rem;
+            // overflow-x: hidden;
         }
-    }
-    .SlideControls {
-        position: absolute;
-        bottom: -40px;
-        left: 2rem;
-        display: flex;
-        @include transition;
-        @include media($bp-mobile) {
-            justify-content: center;
-            width: 100vw;
+        @include media($bp-tablet) {
+            height: 500px;
         }
-        span {
+        .SlideInner {
+            height: auto;
+            margin: auto;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            width: 80px;
-            margin-right: 20px;
-            border: 1px solid $theme-primary-color;
-            color: $theme-primary-color;
-            cursor: pointer;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include media($bp-laptop) {
+                padding-left: 2rem;
+            }
+        }
+        .SlideControls {
+            position: absolute;
+            bottom: -40px;
+            left: 2rem;
+            display: flex;
             @include transition;
             @include media($bp-mobile) {
-                height: 30px;
-                width: 60px;
+                justify-content: center;
+                width: 100vw;
             }
-            i {
-                display: inline-block;
-                font-size: 2.4em;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 80px;
+                margin-right: 20px;
+                border: 1px solid $theme-primary-color;
+                color: $theme-primary-color;
+                cursor: pointer;
+                @include transition;
                 @include media($bp-mobile) {
-                    font-size: 1.5em;
+                    height: 30px;
+                    width: 60px;
                 }
-            }
-            &:hover {
-                &:first-child {
-                    i {
-                        animation: prev 500ms ease-in-out;
+                i {
+                    display: inline-block;
+                    font-size: 2.4em;
+                    @include media($bp-mobile) {
+                        font-size: 1.5em;
                     }
                 }
-                &:last-child {
-                    i {
-                        animation: next 500ms ease-in-out;
+                &:hover {
+                    &:first-child {
+                        i {
+                            animation: prev 500ms ease-in-out;
+                        }
+                    }
+                    &:last-child {
+                        i {
+                            animation: next 500ms ease-in-out;
+                        }
                     }
                 }
             }

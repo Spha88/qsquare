@@ -43,56 +43,58 @@ const SlideShow = ({ services }) => {
     };
 
     return (
-        <div className={classes.SlideShow}>
-            <div
-                className={classes.SlideInner}
-                style={{
-                    transform: `translateX(${-position}%)`,
-                    transition: transition,
-                }}
-            >
-                {services.map((service, index) => (
-                    <Slide
-                        service={service}
-                        key={service.title}
-                        openModal={openModal}
-                        index={index}
-                    />
-                ))}
-
-                {services.map((service, index) => (
-                    <Slide
-                        service={service}
-                        key={`${service.title}aa`}
-                        openModal={openModal}
-                        index={index}
-                    />
-                ))}
-            </div>
-
-            <div className={classes.SlideControls}>
-                <span
-                    onClick={prev}
-                    style={{ opacity: `${currentSlide === 0 ? 0 : 1}` }}
+        <div className={classes.SlideShowContainer}>
+            <div className={classes.SlideShow}>
+                <div
+                    className={classes.SlideInner}
+                    style={{
+                        transform: `translateX(${-position}%)`,
+                        transition: transition,
+                    }}
                 >
-                    <i className='material-icons'>navigate_before</i>
-                </span>
-                <span>
-                    {currentSlide < services.length ? currentSlide + 1 : 1}/
-                    {services.length}
-                </span>
-                <span onClick={next}>
-                    <i className='material-icons'>navigate_next</i>
-                </span>
-            </div>
+                    {services.map((service, index) => (
+                        <Slide
+                            service={service}
+                            key={service.title}
+                            openModal={openModal}
+                            index={index}
+                        />
+                    ))}
 
-            <ServiceModal
-                title={services[slideToOpen].title}
-                description={services[slideToOpen].description}
-                click={closeModal}
-                opened={isOpen}
-                closed={isClosed}
-            />
+                    {services.map((service, index) => (
+                        <Slide
+                            service={service}
+                            key={`${service.title}aa`}
+                            openModal={openModal}
+                            index={index}
+                        />
+                    ))}
+                </div>
+
+                <div className={classes.SlideControls}>
+                    <span
+                        onClick={prev}
+                        style={{ opacity: `${currentSlide === 0 ? 0 : 1}` }}
+                    >
+                        <i className='material-icons'>navigate_before</i>
+                    </span>
+                    <span>
+                        {currentSlide < services.length ? currentSlide + 1 : 1}/
+                        {services.length}
+                    </span>
+                    <span onClick={next}>
+                        <i className='material-icons'>navigate_next</i>
+                    </span>
+                </div>
+
+                <ServiceModal
+                    title={services[slideToOpen].title}
+                    description={services[slideToOpen].description}
+                    click={closeModal}
+                    opened={isOpen}
+                    closed={isClosed}
+                />
+            </div>
         </div>
     );
 };
