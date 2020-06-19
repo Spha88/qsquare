@@ -9,17 +9,38 @@ const Footer = () => {
                 <div className={classes.Footer_content}>
                     <ul>
                         <li>
-                            76 Tieroog Street
-                            <span className={classes.Town}>Kathu</span>8446
+                            <a
+                                href='mailto:info@q-squared.co.za'
+                                title='Email us'
+                            >
+                                <i
+                                    class='fa fa-envelope fa-lag'
+                                    aria-hidden='true'
+                                ></i>
+                            </a>
                         </li>
                         <li>
-                            <span>Email:</span> info@q-sqaured.co.za
+                            <a
+                                href='https://web.facebook.com/qsquaredconcepts/'
+                                title='Visit our Facebook page'
+                            >
+                                <i
+                                    class='fa fa-facebook-square fa-lg'
+                                    aria-hidden='true'
+                                ></i>
+                            </a>
                         </li>
                         <li>
-                            <span>Facebook:</span> @qsquaredconcepts{' '}
-                        </li>
-                        <li>
-                            <span>Tel:</span> 082 556 9878
+                            <a
+                                id='whatsapp'
+                                href='https://api.whatsapp.com/send?phone=27825569878'
+                                title='Send a message on Whatsapp'
+                            >
+                                <i
+                                    class='fa fa-whatsapp fa-lg'
+                                    aria-hidden='true'
+                                ></i>{' '}
+                            </a>
                         </li>
                     </ul>
                 </div>
