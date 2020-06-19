@@ -13,7 +13,7 @@ const MobileNav = ({ open, closeNav }) => {
                             to={navItem.id}
                             duration={1000}
                             smooth={true}
-                            offset={-50}
+                            offset={navItem.offsetMobile}
                             spy={true}
                             activeClass={classes.active}
                             onClick={closeNav}

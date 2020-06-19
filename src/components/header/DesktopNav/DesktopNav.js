@@ -21,7 +21,7 @@ const DesktopNav = ({ open, closeNav }) => {
                             to={navItem.id}
                             duration={1000}
                             smooth={true}
-                            offset={-100}
+                            offset={navItem.offsetDesktop}
                             spy={true}
                             activeClass={classes.active}
                         >

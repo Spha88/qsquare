@@ -10,9 +10,11 @@
         background-attachment: initial;
     }
     .Future_content {
+        width: 100%;
+        max-width: 800px;
         background-color: transparentize(
             $color: $theme-white-color,
-            $amount: 0.1
+            $amount: 0.18
         );
         padding: 5rem 7rem;
         h2 {
@@ -20,7 +22,8 @@
             margin-top: 0;
         }
         main {
-            font-size: 1.3em;
+            font-size: 1.05em;
+            line-height: 1.4em;
             p {
                 &:last-child {
                     margin-bottom: 0;
