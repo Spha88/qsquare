@@ -28,7 +28,7 @@ const navItems = [
         label: 'Contact Us',
         id: 'contact',
         offsetMobile: -50,
-        offsetDesktop: -100,
+        offsetDesktop: -50,
     },
 ];
 

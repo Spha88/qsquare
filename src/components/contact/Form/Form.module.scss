@@ -5,7 +5,11 @@
     width: 100%;
     max-width: 600px;
     padding: 2rem;
-    @include dropShadow;
+    // @include dropShadow;
+    h3 {
+        text-transform: uppercase;
+        font-family: inherit;
+    }
     input,
     select,
     textarea {

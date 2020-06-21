@@ -17,9 +17,8 @@ const MessageInput = ({ addMessage }) => {
                 name='message'
                 rows='5'
                 onChange={e => setMessage(e.target.value)}
-            >
-                {message}
-            </textarea>
+                value={message}
+            ></textarea>
         </div>
     );
 };

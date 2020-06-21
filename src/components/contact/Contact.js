@@ -8,9 +8,6 @@ const Contact = () => {
         <div className={classes.Contact} id='contact'>
             <Container>
                 <div className={classes.Content}>
-                    <header className={classes.Header}>
-                        <h1>Contact Us</h1>
-                    </header>
                     <div className={classes.ContactBody}>
                         <Form />
                     </div>

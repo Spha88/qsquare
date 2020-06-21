@@ -1,7 +1,6 @@
 import * as types from './types';
 
 export const addName = name => dispatch => {
-    console.log('AddName', name);
     dispatch({
         type: types.ADD_NAME,
         payload: name,
@@ -32,5 +31,11 @@ export const addMessage = message => dispatch => {
     dispatch({
         type: types.ADD_MESSAGE,
         payload: message,
+    });
+};
+
+export const sendMessage = () => dispatch => {
+    dispatch({
+        type: types.SEND_MESSAGE,
     });
 };
