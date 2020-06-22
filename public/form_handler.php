@@ -11,15 +11,31 @@ function test_input($data) {
   return $data;
 }
 
+// Validate number
+function validate_phone_number($phone) {
+     // Allow +, - and . in phone number
+     $filtered_phone_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+     // Remove "-" from number
+     $phone_to_check = str_replace("-", "", $filtered_phone_number);
+     // Check the length of number
+     if (strlen($phone_to_check) < 10 || strlen($phone_to_check) > 14) {
+        return false;
+     } else {
+       return true;
+     }
+}
+
   //Set variables to empty string to avoid undefined variable error
-  $name = $email = $message = $error = $OK = '';
+  $name = $number = $email = $subject = $message = $OK = '';
 
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 	
 	$name = test_input( $_POST[ 'name' ] );
-	$email = test_input( $_POST[ 'email' ] );
+	$number = test_input( $_POST[ 'number' ] );
+  $email = test_input( $_POST[ 'email' ] );
+  $subject = test_input( $_POST[ 'subject']);
 	$message = test_input( $_POST[ 'message' ] );
 
     //Validate the name of the client
@@ -34,15 +50,27 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
               } else {
                 $OK = true;
             }
-
-    	}
-
+    	 }
       } else {
-
-    	$OK = false;
+      $OK = false;
+      
     }
 
-       //Validate the email
+    //Validate contact number 
+    if( $OK == true ) {
+      if(!empty($number)){
+        if(validate_phone_number($number)) {
+          $OK = true;
+        } else {
+          $OK = false;
+        }
+      } else {
+        $number = 'No contact number';
+      }
+    }
+
+
+    //Validate the email
     if ($OK == true) {
 
         if(!empty($email)){
@@ -61,6 +89,19 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	      } else {
 	      	$OK = false;
 	    }
+    }
+
+    // Validate the subject
+    if( $OK == true) {
+      if(!empty($subject)){
+        if(strlen($subject) < 41) {
+          $OK = true;
+        } else {
+          $OK = false;
+        }
+      } else {
+        $OK = false;
+      }
     }
 
        //Validate the message
@@ -84,19 +125,16 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
     //sending the email
         if ($OK == true) {
-
-        $to = "mr.smehlomakulu@gmail.com";
-        $subject = "Online query: ".$name;
-        $body = "Name of Client: ".$name."\n\nMessage: \n".$message;
-        $headers =  "From: $name <$email>"; 
+          $to = "mr.smehlomakulu@gmail.com";
+          $emailSubject = "Online query: ".$subject;
+          $body = "Name of Client: ".$name."\nContact Number: ".$number."\n\nMessage: \n".$message;
+          $headers =  "From: $name <$email>"; 
         
-        if ( @mail($to, $subject, $body, $headers) ) {
-            //  echo "your email was sent"
-            echo json_encode(array(
-              "sent" => true
-            ));
+        if ( @mail($to, $emailSubject, $body, $headers) ) {
+            //  Email was sent
+            echo json_encode(array("sent" => true));
           } else {
-            //  echo 'Email could not be sent';
+            //  Email was not sent, server side validation failed
             echo json_encode(["sent" => false, "message" => "Something went wrong"]);
         }
     }

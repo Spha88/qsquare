@@ -9,7 +9,9 @@ export const sendEmail = emailDetails => dispatch => {
         headers: { 'Content-type': 'application/json' },
         data: {
             name: emailDetails.name,
+            number: emailDetails.number,
             email: emailDetails.email,
+            subject: emailDetails.subject,
             message: emailDetails.message,
         },
 

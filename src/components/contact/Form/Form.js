@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './Form.module.scss';
-import Button from '../../layout/Button/Button2';
+
 import { useForm } from 'react-hook-form';
 import validator from 'validator';
 
 import { connect } from 'react-redux';
 import { sendEmail } from '../../../store/actions/contactFormActions';
 
-const Form = ({ sendEmail }) => {
-    let [successMsg, setSuccessMsg] = useState('');
+import Button from '../../layout/Button/Button2';
+import Loader from '../../layout/Loader/Loader';
+
+const Form = ({ sendEmail, sending, emailSent }) => {
     const { register, handleSubmit, errors } = useForm();
 
     const submit = data => {
-        console.log(data);
-
         sendEmail(data);
-
         document.getElementById('contact-form').reset();
-        setSuccessMsg('Message was sent, we will get back to you soon');
     };
 
     const validateNumber = number => {
@@ -36,11 +34,13 @@ const Form = ({ sendEmail }) => {
             onSubmit={handleSubmit(submit)}
             id='contact-form'
         >
-            {successMsg && <h3> {successMsg} </h3>}
+            {sending && <Loader />}
+            {emailSent && <span className={classes.MessageSent}>Message sent.</span>}
+
             <div
                 className={`${classes.FormControl} ${
                     errors.name && classes.Error
-                }`}
+                    }`}
             >
                 <input
                     type='text'
@@ -70,7 +70,7 @@ const Form = ({ sendEmail }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.number && classes.Error
-                }`}
+                    }`}
             >
                 <input
                     type='tel'
@@ -96,7 +96,7 @@ const Form = ({ sendEmail }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.email && classes.Error
-                }`}
+                    }`}
             >
                 <input
                     type='text'
@@ -116,12 +116,12 @@ const Form = ({ sendEmail }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.subject && classes.Error
-                }`}
+                    }`}
             >
                 <select
                     id='subject'
                     name='subject'
-                    ref={register({ required: 'Please choose a subject' })}
+                    ref={register({ required: 'Please choose a subject', maxLength: { value: 40, message: 'Max. characters for subject is 40' } })}
                 >
                     <option value=''>choose a subject</option>
                     <option value='Internet and Digital Marketing'>
@@ -147,7 +147,7 @@ const Form = ({ sendEmail }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.message && classes.Error
-                }`}
+                    }`}
             >
                 <textarea
                     defaultValue='Message'
@@ -175,4 +175,9 @@ const Form = ({ sendEmail }) => {
     );
 };
 
-export default connect(null, { sendEmail })(Form);
+const mapStateToProps = state => ({
+    sending: state.contact.sending,
+    emailSent: state.contact.emailSent
+})
+
+export default connect(mapStateToProps, { sendEmail })(Form);
