@@ -2,7 +2,14 @@
 @import '../../assets/styles/mixins.scss';
 
 .Services {
+    position: relative;
+    &::before {
+        display: table;
+        content: '';
+        clear: both;
+    }
     .Services_header {
+        display: block;
         padding-bottom: 3rem;
         position: relative;
         text-align: center;
@@ -13,7 +20,7 @@
         }
         @include transition;
         @include media($bp-mobile) {
-            padding-bottom: 1rem;
+            padding-bottom: 0;
         }
     }
 }

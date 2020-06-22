@@ -78,10 +78,16 @@
     &:before {
         border-left: 1px solid $theme-primary-color;
         left: -10px;
+        @include media($bp-mobile){
+            display: none;
+        }
     }
     &:after {
         border-right: 1px solid $theme-primary-color;
         right: -10px;
+        @include media($bp-mobile){
+            display: none;
+        }
     }
 }
 

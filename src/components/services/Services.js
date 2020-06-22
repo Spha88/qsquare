@@ -39,7 +39,9 @@ const Services = () => {
                     <ServicesLead />
                 </div>
             </Container>
+
             <SlideShow services={myServices} />
+
         </React.Fragment>
     );
 };

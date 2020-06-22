@@ -60,19 +60,24 @@
             width: 100%;
             text-align: center;
         }
-        @media only screen and (max-width: $bp-laptop) {
+        @include media($bp-laptop) {
             p {
                 padding: 0;
             }
         }
-        @media only screen and (max-width: $bp-tablet) {
+        @include media($bp-tablet) {
             p {
                 font-size: 1.2em;
                 line-height: 2rem;
             }
         }
-        @media only screen and (max-width: $bp-mobile) {
+        @include media($bp-mobile) {
             width: 100%;
+            padding: 3rem;
+            p {
+                font-size: 1.1em;
+                line-height: 2rem;
+            }
         }
     }
 }

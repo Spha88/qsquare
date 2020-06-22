@@ -19,6 +19,7 @@ function App() {
             <div>
                 <Header />
                 <About />
+                <div></div>
                 <Services />
                 <Ownership />
                 <Partners />

@@ -3,6 +3,13 @@
 
 .About {
     padding-bottom: 2rem;
+    display: block;
+    position: relative;
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
     header {
         text-align: center;
     }
@@ -38,14 +45,17 @@
         }
         .About_content {
             width: 60%;
-            padding: 2rem;
+            padding: 2rem 4rem;
             padding-bottom: 0;
-            @media only screen and (max-width: $bp-mobile) {
+            @include transition;
+            @include media($bp-tablet) {
+                padding: 2rem 2.5rem 0;
+            }
+            @include media($bp-mobile) {
                 width: 100%;
                 padding: 2rem 0 0;
             }
             p {
-                font-size: 1.2em;
                 line-height: 1.7rem;
                 @include transition;
                 &:first-child {

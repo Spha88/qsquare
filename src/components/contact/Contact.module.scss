@@ -53,6 +53,9 @@
                     line-height: 1.6em;
                     padding: 2rem 0 0;
                     text-align: left;
+                    @include media($bp-mobile) {
+                        padding: 0;
+                    }
                 }
                 footer {
                     display: flex;
@@ -85,6 +88,9 @@
                         align-items: center;
                         @include media($bp-tablet){
                             justify-content: left;
+                        }
+                        @include media($bp-mobile) {
+                            justify-content: center;
                         }
                         li {
                             margin-left: 20px;
