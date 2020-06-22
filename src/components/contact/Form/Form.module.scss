@@ -10,9 +10,53 @@
         text-transform: uppercase;
         font-family: inherit;
     }
-    input,
-    select,
-    textarea {
-        font-family: inherit;
+
+    .FormControl {
+        margin: 1rem 0;
+        color: $theme-primary-color;
+        label {
+            display: block;
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            display: block;
+            font-size: 17px;
+            width: 100%;
+            outline: none;
+            border: 1px solid
+                transparentize($color: $theme-primary-color, $amount: 0.5);
+            padding: 10px;
+            @include transition;
+            color: $theme-primary-color;
+        }
+        select {
+            option {
+                color: $theme-primary-color;
+                font-size: 0.9em;
+            }
+        }
+        textarea {
+            resize: none;
+        }
+        .ErrorMessage {
+            display: block;
+            font-size: 0.9em;
+            color: $theme-warning-color;
+        }
+    }
+
+    .Error {
+        input,
+        textarea,
+        select {
+            border: 1px solid $theme-warning-color;
+            .ErrorMessage {
+                color: $theme-warning-color;
+            }
+        }
     }
 }
