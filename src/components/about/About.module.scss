@@ -8,17 +8,8 @@
     }
     h1 {
         text-align: center;
-        font-size: 3em;
-        text-transform: uppercase;
-        letter-spacing: 3px;
         position: relative;
-        background: transparent;
         display: inline-block;
-        @include squares-left-heading;
-        @include transition;
-        @media screen and (max-width: $bp-laptop) {
-            font-size: 2.5em;
-        }
     }
     .About_content_container {
         display: flex;

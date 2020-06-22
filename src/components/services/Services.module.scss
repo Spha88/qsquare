@@ -8,12 +8,8 @@
         text-align: center;
         h1 {
             margin: 0;
-            font-size: 3em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
             position: relative;
             display: inline-block;
-            @include squares-left-heading;
         }
         @include transition;
         @include media($bp-mobile) {
