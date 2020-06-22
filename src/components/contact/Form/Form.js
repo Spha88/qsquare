@@ -5,13 +5,17 @@ import { useForm } from 'react-hook-form';
 import validator from 'validator';
 
 import { connect } from 'react-redux';
+import { sendEmail } from '../../../store/actions/contactFormActions';
 
-const Form = () => {
+const Form = ({ sendEmail }) => {
     let [successMsg, setSuccessMsg] = useState('');
     const { register, handleSubmit, errors } = useForm();
 
     const submit = data => {
         console.log(data);
+
+        sendEmail(data);
+
         document.getElementById('contact-form').reset();
         setSuccessMsg('Message was sent, we will get back to you soon');
     };
@@ -171,4 +175,4 @@ const Form = () => {
     );
 };
 
-export default connect(null, {})(Form);
+export default connect(null, { sendEmail })(Form);

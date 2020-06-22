@@ -1,41 +1,35 @@
 import * as types from './types';
+import axios from 'axios';
 
-export const addName = name => dispatch => {
-    dispatch({
-        type: types.ADD_NAME,
-        payload: name,
-    });
+export const sendEmail = emailDetails => dispatch => {
+    dispatch(sending());
+    axios({
+        method: 'post',
+        url: 'form_handler.php',
+        headers: { 'Content-type': 'application/json' },
+        data: {
+            name: emailDetails.name,
+            email: emailDetails.email,
+            message: emailDetails.message,
+        },
+
+    })
+        .then(res => {
+            dispatch({
+                type: types.EMAIL_SENT,
+            });
+            console.log(res);
+        })
+        .catch(error => {
+            dispatch({
+                type: types.EMAIL_SENDING_FAILED,
+            });
+            console.log(error.message);
+        });
 };
 
-export const addNumber = number => dispatch => {
-    dispatch({
-        type: types.ADD_NUMBER,
-        payload: number,
-    });
-};
-
-export const addEmail = email => dispatch => {
-    dispatch({
-        type: types.ADD_EMAIL,
-        payload: email,
-    });
-};
-export const addSubject = subject => dispatch => {
-    dispatch({
-        type: types.ADD_SUBJECT,
-        payload: subject,
-    });
-};
-
-export const addMessage = message => dispatch => {
-    dispatch({
-        type: types.ADD_MESSAGE,
-        payload: message,
-    });
-};
-
-export const sendMessage = () => dispatch => {
-    dispatch({
-        type: types.SEND_MESSAGE,
-    });
+export const sending = () => {
+    return {
+        type: types.SENDING_EMAIL,
+    };
 };
