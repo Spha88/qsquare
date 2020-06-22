@@ -7,15 +7,11 @@
         justify-content: center;
     }
     main {
-        min-width: 70%;
-        width: 700px;
+        width: 600px;
         margin: auto;
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 1.5em;
-        @media only screen and (max-width: $bp-laptop) {
-            font-size: 1em;
-        }
         @media only screen and (max-width: $bp-tablet) {
             width: 100%;
         }

@@ -4,9 +4,12 @@
 .Heading {
     text-align: center;
     text-transform: uppercase;
-    font-size: 3.5em;
+    font-size: 2.5em;
     position: relative;
     background: transparent;
     display: inline-block;
     @include squares-left-heading;
+    @include media($bp-mobile){
+        font-size: 1.8em;
+    }
 }
