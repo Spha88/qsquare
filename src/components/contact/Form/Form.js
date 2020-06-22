@@ -29,11 +29,13 @@ const Form = ({ sendEmail, sending, emailSent }) => {
         }
     };
     return (
+
         <form
             className={classes.ContactForm}
             onSubmit={handleSubmit(submit)}
             id='contact-form'
         >
+            <h3>Say something</h3>
             {sending && <Loader />}
             {emailSent && <span className={classes.MessageSent}>Message sent.</span>}
 

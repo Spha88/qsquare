@@ -160,9 +160,9 @@
 }
 
 @mixin dropShadow {
-    -webkit-box-shadow: 7px 7px 39px -2px rgba(168, 168, 168, 1);
-    -moz-box-shadow: 7px 7px 39px -2px rgba(168, 168, 168, 1);
-    box-shadow: 7px 7px 39px -2px rgba(168, 168, 168, 1);
+    -webkit-box-shadow: 7px 7px 39px -2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 7px 7px 39px -2px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 7px 39px -2px rgba(0, 0, 0, 0.4);
 }
 
 @mixin transition {

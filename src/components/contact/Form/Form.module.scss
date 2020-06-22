@@ -1,70 +1,79 @@
 @import '../../../assets/styles/variables.scss';
 @import '../../../assets/styles/mixins.scss';
 
-.ContactForm {
-    width: 100%;
-    max-width: 600px;
-    padding: 2rem;
-    position: relative;
-    // @include dropShadow;
-    h3 {
-        text-transform: uppercase;
-        font-family: inherit;
-    }
-    .MessageSent {
-        color: $theme-primary-color;
-        font-weight: bold;
-        font-size: 1.3em;
-        display: block;
-        text-align: center;
-    }
-    .FormControl {
-        margin: 1rem 0;
-        color: $theme-primary-color;
-        label {
-            display: block;
-            margin-bottom: 5px;
-            padding-left: 10px;
-        }
-        
-        input,
-        select,
-        textarea {
-            font-family: inherit;
-            display: block;
-            font-size: 17px;
-            width: 100%;
-            outline: none;
-            border: 1px solid
-                transparentize($color: $theme-primary-color, $amount: 0.5);
-            padding: 10px;
-            @include transition;
-            color: $theme-primary-color;
-        }
-        select {
-            option {
-                color: $theme-primary-color;
-                font-size: 0.9em;
-            }
-        }
-        textarea {
-            resize: none;
-        }
-        .ErrorMessage {
-            display: block;
-            font-size: 0.9em;
-            color: $theme-warning-color;
-        }
-    }
 
-    .Error {
-        input,
-        textarea,
-        select {
-            border: 1px solid $theme-warning-color;
+    .ContactForm {
+        width: 100%;
+        padding: 3rem 2rem;
+        position: relative;
+        top: 3rem;
+        background-color: #fff;
+        @include dropShadow;
+        h3 {
+            text-transform: uppercase;
+            font-family: inherit;
+        }
+        .MessageSent {
+            color: $theme-primary-color;
+            font-weight: bold;
+            font-size: 1.3em;
+            display: block;
+            text-align: center;
+        }
+        .FormControl {
+            margin: 1rem 0;
+            color: $theme-primary-color;
+            label {
+                display: block;
+                margin-bottom: 5px;
+                padding-left: 10px;
+            }
+            
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                display: block;
+                font-size: 1em;
+                width: 100%;
+                outline: none;
+                border: 1px solid
+                    transparentize($color: $theme-primary-color, $amount: 0.5);
+                padding: 10px;
+                @include transition;
+                color: $theme-primary-color;
+                &::placeholder {
+                    color: $theme-primary-color;
+                    font-size: 0.85em;
+                }
+            }
+            select {
+
+                font-size: 0.95em;
+                option {
+                    color: $theme-primary-color;
+                    font-size: 0.9tem;
+                }
+            }
+            textarea {
+                resize: none;
+                font-size: .95em;
+            }
             .ErrorMessage {
+                display: block;
+                font-size: 0.9em;
                 color: $theme-warning-color;
             }
         }
+    
+        .Error {
+            input,
+            textarea,
+            select {
+                border: 1px solid $theme-warning-color;
+                .ErrorMessage {
+                    color: $theme-warning-color;
+                }
+            }
+        }
     }
-}

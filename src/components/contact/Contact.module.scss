@@ -1,12 +1,116 @@
 @import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
 
 .Contact {
-    padding-bottom: 4rem;
+    .Container {
+        max-width: 1350px;
+        margin: auto;
+        padding: 0;
+        @include transition;
+        @include media($bp-laptop) {
+            padding: 2rem 2rem;
+        }
+        @include media($bp-mobile) {
+            padding: 2rem 1rem;
+        }
+    }
     .Header {
         text-align: center;
     }
-    .ContactBody {
-        display: flex;
-        justify-content: flex-end;
+    .Content {
+        padding: 2rem 0 0;
+        @include media($bp-tablet){
+            padding: 0;
+        }
+        .ContactBody {
+            display: flex;
+            justify-content: space-between;
+            @include media($bp-mobile){
+                display: block;
+            }
+            
+            .Lead {
+                width: 50%;
+                padding: 4rem 3rem;
+                @include transition;
+                @include media($bp-laptop){
+                    padding: 2rem 1rem;
+                }
+                @include media($bp-mobile){
+                    width: 100%;
+                    padding-bottom: 0;
+                }
+                header {
+                    display: flex;
+                    justify-content: center;
+                    h1 {
+                        text-transform: uppercase;
+                        text-align: center;
+                        @include squares-left-heading;
+                    }
+                }
+                p {
+                    line-height: 1.6em;
+                    padding: 2rem 0 0;
+                    text-align: left;
+                }
+                footer {
+                    display: flex;
+                    justify-content: center;
+                    @include media($bp-tablet){
+                        display: block;
+                    }
+                    ul.Address {
+                        display: block;
+                        margin-left: 0;
+                        margin-right: 2rem;
+                        position: relative;
+                        padding-left: 30px;
+                        padding-top: 16px;
+                        span {
+                            position: absolute;
+                            left: -0;
+                            font-size: 1.3em;
+                        }
+                        li {
+                            font-size: 1em;
+                            margin: 0;
+                        }
+                    }
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+                        justify-content:center;
+                        padding: 0;
+                        align-items: center;
+                        @include media($bp-tablet){
+                            justify-content: left;
+                        }
+                        li {
+                            margin-left: 20px;
+                            font-size: 1.3em;
+                            &:first-child {
+                                font-size: 1.8em;
+                            }
+                            @include media($bp-tablet){
+                                margin-right: 20px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .FormContainer {
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+                @include media($bp-laptop){
+                    max-width: 50%;
+                }
+                @include media($bp-mobile){
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
