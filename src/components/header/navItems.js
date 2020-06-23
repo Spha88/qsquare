@@ -5,6 +5,28 @@ const navItems = [
         id: 'services',
         offsetMobile: -80,
         offsetDesktop: -84,
+        children: [
+            {
+                id: 1,
+                label: 'Internet and Digital Marketing',
+            },
+            {
+                id: 2,
+                label: 'Technical Support Services',
+            },
+            {
+                id: 3,
+                label: 'IT Performance Management',
+            },
+            {
+                id: 4,
+                label: 'Software Engineering',
+            },
+            {
+                id: 5,
+                label: 'SMME Services',
+            },
+        ],
     },
     {
         label: 'Ownership',

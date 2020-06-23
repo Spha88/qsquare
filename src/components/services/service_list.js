@@ -1,5 +1,6 @@
 const services = [
     {
+        id: '1',
         title: 'Internet and Digital Marketing',
         abstract: `<p>The growing trend, pressure and necessity to transact online has left many organisations scrambling for relevance or face extinction.</p>`,
         description: `<p>The growing trend, pressure and necessity to transact online has left many organisations scrambling for relevance or face extinction. We have developed a framework to help offline businesses seamlessly migrate from their labour-intensive offline business to the automated digital platforms.</p><p>
@@ -8,6 +9,7 @@ const services = [
         `,
     },
     {
+        id: '2',
         title: 'Technical Support Services',
         abstract: `<p>The main focus of our Technical Support Services is three-fold, namely, <strong>Support Services</strong>, <strong>IT Governance</strong> and <strong>Cyber Security</strong>.</p>`,
         description: `
@@ -20,6 +22,7 @@ const services = [
     },
 
     {
+        id: '3',
         title: 'IT Performance Management (ITPM)',
         abstract: `<p>Using industry standard performance metrices for IT Performance Management and Resource Planning we help our clients to assess, monitor and measure performance of their IT resources.</p>`,
         description: `
@@ -28,6 +31,7 @@ const services = [
         `,
     },
     {
+        id: '4',
         title: 'Software Engineering',
         abstract: `<p>We take pride in the few Software Engineering projects awaiting deployment and launch. Our development projects have a strong focus on creating platforms for collaboration between industry experts and aspirant novices. </p>`,
         description: `
@@ -35,6 +39,7 @@ const services = [
         `,
     },
     {
+        id: '5',
         title: 'SMME Services',
         abstract: `<p>This division of our business is meant to assist ordinary persons organise their dreams and passions into formalised and recognised business entities. </p>`,
         description: `
