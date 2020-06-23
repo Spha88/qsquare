@@ -27,8 +27,12 @@
         top: -120%;
         list-style: none;
         margin: 0;
-        height: 68px;
+        height: 50px;
+        padding-left: 0;
         @include transition;
+        @include media($bp-tablet) {
+            height: 45px;
+        }
         li {
             position: relative;
             display: flex;
@@ -36,36 +40,43 @@
             height: 100%;
             a {
                 display: block;
+                position: relative;
                 height: 100%;
-                width: 100%;
                 display: flex;
                 padding: 0 20px;
                 align-items: center;
                 font-size: 0.95em;
                 font-weight: 400;
                 text-transform: uppercase;
-                @include transition;
+                transition: background-color 500ms ease-in-out;
                 &.active {
                     background: $theme-primary-color;
                     color: $theme-white-color !important;
                 }
-                @include media($bp-tablet) {
-                    padding: 0 5px;
+                &::after {
+                    @include transition;
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 50%;
+                    height: 2px;
+                    width: 0;
+                    background-color: $theme-primary-color;
                 }
-            }
-            @include transition;
-            &:hover {
-                color: $theme-white-color;
-                cursor: pointer;
-                background: $theme-primary-color;
-            }
-        }
-        @media only screen and (max-width: $bp-tablet) {
-            height: 50px;
-            li {
-                padding: 0 10px;
-                &:last-child {
-                    padding: 0 20px;
+                &:hover {
+                    color: $theme-primary-color;
+                    cursor: pointer;
+                    &::after {
+                        animation: animate 500ms ease-in-out;
+                        display: block;
+                        right: 10%;
+                        width: 80%;
+                    }
+                }
+
+                @include media($bp-tablet) {
+                    padding: 0 10px;
                 }
             }
         }
@@ -76,5 +87,20 @@
     }
     .Hide {
         top: -120%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        right: 50%;
+    }
+    70% {
+        width: 100%;
+        right: 0;
+    }
+    100% {
+        width: 80%;
+        right: 10%;
     }
 }

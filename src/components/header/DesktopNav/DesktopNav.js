@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import classes from './Desktop.module.scss';
+import classes from './DesktopNav.module.scss';
 import navItems from '../navItems';
 
 const DesktopNav = ({ open, closeNav }) => {
@@ -25,7 +25,7 @@ const DesktopNav = ({ open, closeNav }) => {
                             spy={true}
                             activeClass={classes.active}
                         >
-                            <span>{navItem.label}</span>
+                            {navItem.label}
                         </Link>
                     </li>
                 ))}

@@ -7,8 +7,11 @@
     top: 0;
     left: 0;
     z-index: 150;
-    // padding: 0 50px 0 50px;
-    background-color: $theme-secondary-color;
+    border-bottom: 1px solid $theme-primary-color;
+    background-color: transparentize(
+        $color: $theme-secondary-color,
+        $amount: 0.05
+    );
     .Nav {
         display: flex;
         justify-content: space-between;
@@ -16,24 +19,21 @@
         max-width: 1350px;
         width: 100%;
         margin: auto;
-        background: $theme-secondary-color;
+        padding: 0 20px;
         position: relative;
         @include transition;
-        @include media($bp-mobile) {
-            padding: 0 3px 0 12px;
-        }
         .Logo {
-            height: 50px;
-            width: 50px;
-            margin: 10px 10px 10px 0px;
+            height: 40px;
+            width: 40px;
+            margin: 5px 5px 5px 0px;
             background: $theme-secondary-color
                 url('../../../assets/images/qlogo.png') no-repeat left top;
             background-size: contain;
             @include transition;
             transform: scale(1);
             @media only screen and (max-width: $bp-tablet) {
-                height: 40px;
-                width: 40px;
+                height: 35px;
+                width: 35px;
                 margin: 5px;
             }
             &:hover {
