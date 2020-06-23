@@ -21,6 +21,8 @@ a {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 h1,
 h2,
@@ -36,7 +38,7 @@ h1 {
     font-size: 2.5em;
     text-transform: uppercase;
     @include squares-left-heading;
-    @include media($bp-mobile){
+    @include media($bp-mobile) {
         font-size: 1.8em;
     }
 }

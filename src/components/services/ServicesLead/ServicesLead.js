@@ -4,7 +4,9 @@ import classes from './ServicesLead.module.scss';
 const ServicesLead = () => {
     return (
         <div className={classes.Services_lead}>
-            <div className={classes.Services_lead_image}></div>
+            <div className={classes.Services_lead_image}>
+                <div className={classes.Background}></div>
+            </div>
             <div className={classes.Services_lead_content}>
                 <p>
                     We offer a range of ICT services meant to create both

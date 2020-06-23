@@ -7,17 +7,33 @@
     display: flex;
     align-items: center;
     @include transition;
+    &:hover {
+        .Background {
+            transform: scale(1.2) rotate(3deg) translateX(-5%);
+        }
+    }
     @media only screen and (max-width: $bp-tablet) {
         margin: 1rem 0 0 0;
     }
     .Services_lead_image {
-        background: $theme-primary-color
-            url('../../../assets/images/services_bg.png') no-repeat right bottom;
-        background-size: cover;
+        position: relative;
         height: 500px;
         width: 50%;
+        overflow: hidden;
         @media only screen and (max-width: $bp-tablet) {
             display: none;
+        }
+        .Background {
+            transition: all 6000ms ease;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background: $theme-primary-color
+                url('../../../assets/images/services_bg.png') no-repeat right
+                bottom;
+            background-size: cover;
         }
     }
     .Services_lead_content {
@@ -28,9 +44,12 @@
         margin: 10px;
         background: transparentize($color: $theme-white-color, $amount: 0.1);
         line-height: 1.5em;
-        // text-shadow: 1px 1px 7px $theme-primary-color;
+        text-shadow: 1px 1px 7px $theme-white-color;
         @include squares-left-block;
         @include transition;
+        &:hover {
+            background: transparentize($color: $theme-white-color, $amount: 0);
+        }
         @media only screen and (max-width: $bp-tablet) {
             padding: 1rem 2rem;
             position: relative;

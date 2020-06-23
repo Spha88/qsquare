@@ -5,6 +5,10 @@
     width: 100%;
     overflow: hidden;
     margin-top: 2rem;
+    padding-left: 1rem;
+    @include media($bp-laptop) {
+        padding-left: 0;
+    }
     @include media($bp-mobile) {
         margin-top: 0;
     }
@@ -18,7 +22,6 @@
         height: 450px;
         @include media($bp-laptop) {
             padding-left: 1rem;
-            // overflow-x: hidden;
         }
         @include media($bp-tablet) {
             height: 500px;
@@ -40,7 +43,7 @@
         }
         .SlideControls {
             position: absolute;
-            bottom: -30px;
+            bottom: -40px;
             display: flex;
             @include transition;
             @include media($bp-mobile) {

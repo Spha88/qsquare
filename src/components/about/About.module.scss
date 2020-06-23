@@ -5,7 +5,7 @@
     padding-bottom: 2rem;
     display: block;
     position: relative;
-    &::after{
+    &::after {
         content: '';
         display: table;
         clear: both;
@@ -62,7 +62,6 @@
                     margin-top: 0;
                 }
                 @media screen and (max-width: $bp-laptop) {
-                    font-size: 1em;
                     line-height: 1.5rem;
                 }
             }

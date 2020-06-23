@@ -48,8 +48,9 @@ const SlideShow = ({ services }) => {
         const options = {
             distance: '100%',
             origin: 'right',
-            delay: '1000',
+            delay: '0',
             duration: '2000',
+            viewFactor: 0.5,
         };
         scrollReveal().reveal('#service-slide', options);
         //-------------------------------
@@ -100,15 +101,14 @@ const SlideShow = ({ services }) => {
                         <i className='material-icons'>navigate_next</i>
                     </span>
                 </div>
-
-                <ServiceModal
-                    title={services[slideToOpen].title}
-                    description={services[slideToOpen].description}
-                    click={closeModal}
-                    opened={isOpen}
-                    closed={isClosed}
-                />
             </div>
+            <ServiceModal
+                title={services[slideToOpen].title}
+                description={services[slideToOpen].description}
+                click={closeModal}
+                opened={isOpen}
+                closed={isClosed}
+            />
         </div>
     );
 };

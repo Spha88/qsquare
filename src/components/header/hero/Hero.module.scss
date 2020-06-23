@@ -73,6 +73,10 @@
             }
         }
         @include media($bp-tablet) {
+            background-color: transparentize(
+                $color: $theme-primary-color,
+                $amount: 0.1
+            );
             p {
                 font-size: 1.2em;
                 line-height: 2rem;

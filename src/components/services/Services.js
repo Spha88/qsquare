@@ -41,7 +41,6 @@ const Services = () => {
             </Container>
 
             <SlideShow services={myServices} />
-
         </React.Fragment>
     );
 };

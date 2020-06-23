@@ -4,7 +4,7 @@
 .Container {
     max-width: 1350px;
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     @include transition;
     @include media($bp-laptop) {
         padding: 2rem 2rem;
