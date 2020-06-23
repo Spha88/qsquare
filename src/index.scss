@@ -64,17 +64,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    border: 1px solid $theme-secondary-color;
+    border: 1px solid $theme-white-color;
     cursor: pointer;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $theme-primary-color;
+    background: $theme-secondary-color;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $theme-highlight-color;
+    background: $theme-primary-color;
     cursor: pointer;
 }

@@ -36,7 +36,6 @@
         li {
             position: relative;
             height: 100%;
-            border: 1px solid yellow;
             a {
                 display: block;
                 position: relative;
@@ -76,6 +75,68 @@
 
                 @include media($bp-tablet) {
                     padding: 0 10px;
+                }
+            }
+            /*SubNav style*/
+            &:hover {
+                .SubNav {
+                    display: flex;
+                }
+            }
+            .SubNav {
+                background: $theme-primary-color;
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                z-index: -10;
+                width: 400px;
+                left: 0;
+                top: 50px;
+                padding: 0;
+                padding-top: 1rem;
+                @include transition;
+                @include media($bp-tablet) {
+                    top: 45px;
+                }
+                li {
+                    flex-basis: auto;
+                    list-style-type: none;
+                    padding: 10px 10px 10px 30px;
+                    color: #fff;
+                    &:hover {
+                        background: transparentize(
+                            $color: $theme-secondary-color,
+                            $amount: 0.9
+                        );
+                        cursor: pointer;
+                    }
+                    a {
+                        display: block;
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        padding: 0;
+                        align-items: center;
+                        font-size: 0.95em;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        transition: background-color 500ms ease-in-out;
+                        &.active {
+                            color: $theme-white-color !important;
+                            background: none;
+                        }
+                        &:hover {
+                            color: $theme-white-color;
+                            cursor: pointer;
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        @include media($bp-tablet) {
+                            padding: 0 10px;
+                        }
+                    }
                 }
             }
         }
