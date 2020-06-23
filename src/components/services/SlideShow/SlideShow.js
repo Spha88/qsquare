@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './SlideShow.module.scss';
 import Slide from './Slide/Slide';
 import ServiceModal from '../../layout/serviceModal/ServiceModal';
+import scrollReveal from 'scrollreveal';
 
 const SlideShow = ({ services }) => {
     let [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,7 @@ const SlideShow = ({ services }) => {
             setTimeout(() => {
                 setTransition('none');
                 setCurrentSlide(0);
-            }, 501);
+            }, 500);
         }
     };
 
@@ -42,9 +43,21 @@ const SlideShow = ({ services }) => {
         setIsClosed(true);
     };
 
+    useEffect(() => {
+        // ScrollReveal animation
+        const options = {
+            distance: '100%',
+            origin: 'right',
+            delay: '1000',
+            duration: '2000',
+        };
+        scrollReveal().reveal('#service-slide', options);
+        //-------------------------------
+    });
+
     return (
         <div className={classes.SlideShowContainer}>
-            <div className={classes.SlideShow}>
+            <div className={classes.SlideShow} id='service-slide'>
                 <div
                     className={classes.SlideInner}
                     style={{
@@ -71,6 +84,7 @@ const SlideShow = ({ services }) => {
                     ))}
                 </div>
 
+                {/* Modal controls*/}
                 <div className={classes.SlideControls}>
                     <span
                         onClick={prev}

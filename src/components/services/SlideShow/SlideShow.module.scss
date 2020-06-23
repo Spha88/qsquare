@@ -4,6 +4,10 @@
 .SlideShowContainer {
     width: 100%;
     overflow: hidden;
+    margin-top: 2rem;
+    @include media($bp-mobile) {
+        margin-top: 0;
+    }
     .SlideShow {
         overflow: hidden;
         width: 100%;
@@ -30,11 +34,13 @@
             @include media($bp-laptop) {
                 padding-left: 2rem;
             }
+            @include media($bp-mobile) {
+                padding-left: 1rem;
+            }
         }
         .SlideControls {
             position: absolute;
-            bottom: -40px;
-            left: 2rem;
+            bottom: -30px;
             display: flex;
             @include transition;
             @include media($bp-mobile) {
@@ -45,10 +51,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 40px;
-                width: 80px;
+                height: 35px;
+                width: 70px;
                 margin-right: 20px;
-                border: 1px solid $theme-primary-color;
+                // border: 1px solid
+                //     transparentize($color: $theme-primary-color, $amount: 0.5);
                 color: $theme-primary-color;
                 cursor: pointer;
                 @include transition;

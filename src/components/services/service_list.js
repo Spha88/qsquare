@@ -36,7 +36,7 @@ const services = [
     },
     {
         title: 'SMME Services',
-        abstract: `<p>This division of our business is meant to assist ordinary persons organise their dreams and passions into formalised and recognised business entities. </p><p>Our key SMME services are listed below for your convenience.</p>`,
+        abstract: `<p>This division of our business is meant to assist ordinary persons organise their dreams and passions into formalised and recognised business entities. </p>`,
         description: `
             <p>This division of our business is meant to assist ordinary persons organise their dreams and passions into formalised and recognised business entities.</p>
             <p>Our key SMME services are listed below for your convenience.</p>
