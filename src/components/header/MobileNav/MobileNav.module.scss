@@ -11,21 +11,20 @@
     height: auto;
     z-index: 200;
     background: $theme-secondary-color;
-    border-top: 1px solid $theme-primary-color;
+    // border-top: 1px solid $theme-primary-color;
     @include transition;
     ul {
         list-style: none;
         padding: 1rem;
         padding-top: 0;
         li {
-            margin-bottom: 10px;
             font-size: 1em;
-
+            border-top: 1px solid
+                transparentize($color: $theme-primary-color, $amount: 0.8);
             a {
                 display: block;
                 width: 100%;
-                padding: 10px;
-                border: 1px solid $theme-primary-color;
+                padding: 7px;
                 @include transition;
                 &.active {
                     background: $theme-primary-color;
@@ -34,11 +33,15 @@
             }
         }
         .SubNav {
-            padding: 10px 0 0 0;
+            padding: 0;
             li {
-                padding-left: 10px;
+                padding: 5px 10px 5px 20px;
+                border: none;
                 &:last-child {
                     margin-bottom: 0;
+                }
+                &:first-child {
+                    padding-top: 0;
                 }
             }
         }
