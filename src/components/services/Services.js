@@ -4,6 +4,8 @@ import Container from '../layout/container/Container';
 import service_list from './service_list';
 import ServicesLead from './ServicesLead/ServicesLead';
 import SlideShow from './SlideShow/SlideShow';
+
+import ServicesIE from '../servicesInternetExplorer/Services';
 // import ServicesList from './ServicesList/ServicesList';
 
 import marketing_bg from '../../assets/images/digital_marketing.jpg';
@@ -13,6 +15,10 @@ import engineering from '../../assets/images/software_engineering.jpg';
 import sars_registration from '../../assets/images/smme_bg.jpg';
 
 const Services = () => {
+    // Internet Explorer 6-11
+    const isIE = /*@cc_on!@*/ false || !!document.documentMode;
+
+    console.log('This is IE: ' + isIE);
     let bg_images = [
         marketing_bg,
         ict_services_bg,
@@ -27,6 +33,10 @@ const Services = () => {
             image: bg_images[index],
         };
     });
+
+    if (true) {
+        return <ServicesIE />;
+    }
 
     return (
         <React.Fragment>

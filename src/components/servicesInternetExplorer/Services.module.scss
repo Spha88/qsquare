@@ -1,0 +1,53 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
+.Services {
+    .Services_header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 4rem;
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+            @include squares-left-heading;
+        }
+    }
+    .Services_lead {
+        margin: 3rem 0 0 0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .Services_lead_image {
+            background: url('../../assets/images/bg-two.jpg') no-repeat center
+                center;
+            background-size: 120%;
+            width: 48%;
+        }
+        .Services_lead_content {
+            padding: 2rem 5rem;
+            width: 48%;
+            right: 0;
+            position: relative;
+            background: transparentize(
+                $color: $theme-white-color,
+                $amount: 0.1
+            );
+            font-size: 1em;
+            line-height: 1.5em;
+            text-shadow: 1px 1px 7px $theme-primary-color;
+            @include squares-left-block;
+        }
+    }
+    .Services_list {
+        margin-top: 3rem;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // @include squares-right-block;
+    }
+}

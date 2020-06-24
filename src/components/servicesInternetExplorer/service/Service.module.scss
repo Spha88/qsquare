@@ -1,0 +1,69 @@
+@import '../../../assets/styles/variables.scss';
+
+.Service {
+    width: 48%;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    &:hover {
+        .Service_header {
+            .Header_bg {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+    }
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 10%;
+        width: 10%;
+        border-bottom: 1px solid $theme-primary-color;
+    }
+    &:after {
+        border-left: 1px solid $theme-primary-color;
+        left: 0;
+    }
+    &:before {
+        border-right: 1px solid $theme-primary-color;
+        right: 0;
+    }
+    .Service_header {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-bottom: 3px solid $theme-highlight-color;
+        transition: all 1000ms ease;
+        div {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            .Header_bg {
+                height: 100%;
+                width: 100%;
+                transition: all 1000ms ease;
+                background-size: cover !important;
+            }
+        }
+    }
+    main {
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 10px 40px;
+            color: $theme-primary-color;
+            font-weight: 300;
+            padding: 1rem 2rem 0 2rem;
+        }
+        .Service_content {
+            padding: 0.5rem 2rem 0;
+            line-height: 1.5em;
+        }
+    }
+    footer {
+        text-align: center;
+    }
+}
