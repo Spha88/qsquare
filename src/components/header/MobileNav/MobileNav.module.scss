@@ -3,6 +3,7 @@
 
 .MobileNav {
     display: block;
+    overflow-y: auto;
     position: absolute;
     top: 45px;
     right: -130%;
@@ -14,11 +15,11 @@
     @include transition;
     ul {
         list-style: none;
-        padding-left: 0;
-        padding: 2rem;
+        padding: 1rem;
+        padding-top: 0;
         li {
             margin-bottom: 10px;
-            font-size: 1.1em;
+            font-size: 1em;
 
             a {
                 display: block;
@@ -29,6 +30,15 @@
                 &.active {
                     background: $theme-primary-color;
                     color: $theme-white-color !important;
+                }
+            }
+        }
+        .SubNav {
+            padding: 10px 0 0 0;
+            li {
+                padding-left: 10px;
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }

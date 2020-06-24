@@ -16,7 +16,7 @@
     background-color: transparentize($color: $theme-white-color, $amount: 0.1);
     &.Open {
         animation: open 1000ms ease;
-        z-index: 100;
+        z-index: 300;
         left: 0;
         opacity: 1;
     }
