@@ -72,6 +72,7 @@ const SlideShow = ({ services }) => {
                             key={service.title}
                             openModal={openModal}
                             index={index}
+                            currentSlide={currentSlide}
                         />
                     ))}
 
@@ -81,6 +82,7 @@ const SlideShow = ({ services }) => {
                             key={`${service.title}aa`}
                             openModal={openModal}
                             index={index}
+                            currentSlide={currentSlide}
                         />
                     ))}
                 </div>

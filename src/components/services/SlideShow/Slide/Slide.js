@@ -1,11 +1,18 @@
 import React from 'react';
 import classes from './Slide.module.scss';
 
+import PropTypes from 'prop-types';
 import Button from '../../../layout/Button/Button2';
 
-const Slide = ({ service, openModal, index }) => {
+const Slide = ({ service, openModal, index, currentSlide }) => {
+    console.log(`index: ${index} current slide: ${currentSlide}`);
+
     return (
-        <div className={classes.Slide}>
+        <div
+            className={`${classes.Slide} ${
+                index === currentSlide && classes.active
+            }`}
+        >
             <div className={classes.SlideImageContainer}>
                 <div
                     className={classes.SlideImage}
@@ -24,6 +31,13 @@ const Slide = ({ service, openModal, index }) => {
             </div>
         </div>
     );
+};
+
+Slide.propTypes = {
+    service: PropTypes.object.isRequired,
+    openModal: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
+    currentSlide: PropTypes.number.isRequired,
 };
 
 export default Slide;

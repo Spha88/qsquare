@@ -3,7 +3,7 @@
 
 .SlideShowContainer {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     margin-top: 2rem;
     padding-left: 1rem;
     @include media($bp-laptop) {
@@ -11,9 +11,9 @@
     }
     @include media($bp-mobile) {
         margin-top: 0;
+        overflow: hidden;
     }
     .SlideShow {
-        overflow: hidden;
         width: 100%;
         max-width: 1350px;
         margin: 0 auto 5rem;
@@ -30,7 +30,7 @@
             height: auto;
             margin: auto;
             display: flex;
-            overflow: hidden;
+            overflow: visible;
             position: absolute;
             left: 0;
             top: 0;
