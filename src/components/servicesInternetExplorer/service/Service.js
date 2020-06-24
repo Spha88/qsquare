@@ -6,7 +6,6 @@ import ServiceModal from '../../layout/serviceModal/ServiceModal';
 const Service = ({ service: { image, title, abstract, description } }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
-    const [slideToOpen, setSlideToOpen] = useState(1);
 
     const openModal = index => {
         setIsOpen(true);
@@ -42,7 +41,6 @@ const Service = ({ service: { image, title, abstract, description } }) => {
 
             <ServiceModal
                 title={title}
-                image={image}
                 description={description}
                 click={closeModal}
                 opened={isOpen}

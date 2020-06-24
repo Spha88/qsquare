@@ -1,4 +1,5 @@
 @import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
 
 .Service {
     width: 48%;
@@ -65,5 +66,8 @@
     }
     footer {
         text-align: center;
+    }
+    @include media($bp-mobile) {
+        width: 100%;
     }
 }

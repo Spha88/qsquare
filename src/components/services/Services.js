@@ -34,7 +34,8 @@ const Services = () => {
         };
     });
 
-    if (isIE) {
+    // Return service component without slide for internet explorer
+    if (true) {
         return <ServicesIE />;
     }
 

@@ -26,6 +26,9 @@
                 center;
             background-size: 120%;
             width: 48%;
+            @include media($bp-mobile) {
+                display: none;
+            }
         }
         .Services_lead_content {
             padding: 2rem 5rem;
@@ -40,6 +43,12 @@
             line-height: 1.5em;
             text-shadow: 1px 1px 7px $theme-primary-color;
             @include squares-left-block;
+            @include media($bp-laptop) {
+                padding: 2rem;
+            }
+            @include media($bp-mobile) {
+                width: 100%;
+            }
         }
     }
     .Services_list {
