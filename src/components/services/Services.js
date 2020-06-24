@@ -34,7 +34,7 @@ const Services = () => {
         };
     });
 
-    if (true) {
+    if (isIE) {
         return <ServicesIE />;
     }
 
