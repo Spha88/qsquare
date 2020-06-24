@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './ServiceModal.module.scss';
 
+import PropTypes from 'prop-types';
+
 const ServiceModal = ({ title, description, opened, closed, click }) => {
     const bdClass = [classes.Backdrop];
     opened && bdClass.push(classes.Open);
@@ -18,6 +20,14 @@ const ServiceModal = ({ title, description, opened, closed, click }) => {
             </div>
         </div>
     );
+};
+
+ServiceModal.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    opened: PropTypes.bool.isRequired,
+    closed: PropTypes.bool.isRequired,
+    click: PropTypes.func.isRequired,
 };
 
 export default ServiceModal;
