@@ -51,10 +51,14 @@
                 }
                 p {
                     line-height: 1.6em;
+                    font-size: 1.3em;
                     padding: 2rem 0 0;
                     text-align: left;
                     @include media($bp-mobile) {
                         padding: 0;
+                    }
+                    @include media($bp-tablet) {
+                        font-size: 1em;
                     }
                 }
                 footer {

@@ -9,15 +9,23 @@ const Contact = () => {
                 <div className={classes.Content}>
                     <div className={classes.ContactBody}>
                         <div className={classes.Lead}>
-                            <header><h1>Contact Us</h1></header>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti et fuga mollitia officiis, consectetur veniam. Deserunt dignissimos laborum commodi obcaecati error maxime consequatur mollitia consequuntur molestias illum quisquam, deleniti.</p>
+                            <header>
+                                <h1>Contact Us</h1>
+                            </header>
+                            <p>
+                                We deliver custom-built solutions for your
+                                business. Let us know which services you're
+                                interested in and we'll get in touch with you.
+                            </p>
 
                             <footer>
                                 <ul className={classes.Address}>
-                                    <span><i
-                                        className='fa fa-map-marker fa-lg'
-                                        aria-hidden='true'
-                                    ></i></span>
+                                    <span>
+                                        <i
+                                            className='fa fa-map-marker fa-lg'
+                                            aria-hidden='true'
+                                        ></i>
+                                    </span>
                                     <li>76 Tieroog Street</li>
                                     <li>Kathu</li>
                                     <li>8446</li>

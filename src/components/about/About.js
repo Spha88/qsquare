@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import classes from './About.module.scss';
 import Container from '../layout/container/Container';
 import Vision from './vision/Vision';
@@ -33,7 +34,15 @@ const About = () => {
                         <div
                             dangerouslySetInnerHTML={{ __html: extract }}
                         ></div>
-                        <Button label='Read More' click={openModal} />
+                        <Button label='Learn More' click={openModal} />
+                        <Link
+                            to='contact'
+                            duration={1000}
+                            smooth={true}
+                            offset={-50}
+                        >
+                            <Button label='Contact Us' />
+                        </Link>
                     </div>
                 </div>
             </div>
