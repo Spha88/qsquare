@@ -12,7 +12,7 @@
             justify-content: center;
             flex-wrap: wrap;
             margin: 0;
-            padding: 3rem 0 0;
+            padding: 3rem 0;
             li {
                 display: flex;
                 margin: 0 10px 20px;
@@ -40,6 +40,9 @@
                     }
                 }
             }
+        }
+        p.CopyRight {
+            margin: 0;
         }
     }
 

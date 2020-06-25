@@ -43,6 +43,11 @@ const Footer = () => {
                             </a>
                         </li>
                     </ul>
+
+                    <p className={classes.CopyRight} style={{ color: '#fff' }}>
+                        Q-Squared Concepts (PTY) Ltd &copy;{' '}
+                        {new Date().getFullYear()}
+                    </p>
                 </div>
 
                 <div className={classes.Designer}>
