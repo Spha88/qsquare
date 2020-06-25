@@ -93,14 +93,17 @@ const SlideShow = ({ services }) => {
                         onClick={prev}
                         style={{ opacity: `${currentSlide === 0 ? 0 : 1}` }}
                     >
-                        <i className='material-icons'>navigate_before</i>
+                        <i class='fa fa-long-arrow-left' aria-hidden='true'></i>
                     </span>
                     <span>
                         {currentSlide < services.length ? currentSlide + 1 : 1}/
                         {services.length}
                     </span>
                     <span onClick={next}>
-                        <i className='material-icons'>navigate_next</i>
+                        <i
+                            class='fa fa-long-arrow-right'
+                            aria-hidden='true'
+                        ></i>
                     </span>
                 </div>
             </div>
