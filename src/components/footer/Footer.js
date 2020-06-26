@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../layout/container/Container';
 import classes from './Footer.module.scss';
+import UpButton from '../layout/UpButton/UpButton';
 
 const Footer = () => {
     return (
@@ -54,6 +55,7 @@ const Footer = () => {
                     <a href='http://www.netslate.co.za'>Website by Spha</a>
                 </div>
             </Container>
+            <UpButton />
         </div>
     );
 };

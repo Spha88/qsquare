@@ -5,6 +5,8 @@
     background-color: $theme-primary-color;
     padding: 5rem 0 1rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
     .Footer_content {
         ul {
             display: flex;

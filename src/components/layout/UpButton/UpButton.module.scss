@@ -1,0 +1,47 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.UpButtonContainer {
+    position: absolute;
+    // border: 1px solid yellow;
+    right: 0;
+    top: 30%;
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+    button {
+        border-radius: 0em;
+        outline: none;
+        border: 0;
+        font-size: 2rem;
+        background: transparent;
+        color: $theme-secondary-color;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        @include transition;
+    }
+    &:hover {
+        button {
+            animation: bounceUp 400ms ease-in;
+            color: $theme-white-color;
+        }
+    }
+    @include media($bp-mobile) {
+        top: 70%;
+        width: 100px;
+    }
+}
+
+@keyframes bounceUp {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 30%;
+    }
+    100% {
+        bott0m: 0;
+    }
+}
