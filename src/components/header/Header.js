@@ -10,6 +10,8 @@ const Header = () => {
         <header className={classes.Header} id='header'>
             <Nav />
             <Hero />
+
+            {/* Styles for Particles in index.scss*/}
             <Particles
                 params={{
                     particles: {

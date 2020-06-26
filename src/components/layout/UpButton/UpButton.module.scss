@@ -22,15 +22,15 @@
         left: 30%;
         @include transition;
     }
-    &:hover {
-        button {
-            animation: bounceUp 400ms ease-in;
-            color: $theme-white-color;
-        }
-    }
     @include media($bp-mobile) {
         top: 70%;
         width: 100px;
+    }
+}
+.hover {
+    button {
+        animation: bounceUp 400ms ease-in;
+        color: $theme-white-color;
     }
 }
 

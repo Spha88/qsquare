@@ -93,14 +93,20 @@ const SlideShow = ({ services }) => {
                         onClick={prev}
                         style={{ opacity: `${currentSlide === 0 ? 0 : 1}` }}
                     >
-                        <i class='fa fa-chevron-left' aria-hidden='true'></i>
+                        <i
+                            className='fa fa-chevron-left'
+                            aria-hidden='true'
+                        ></i>
                     </span>
                     <span>
                         {currentSlide < services.length ? currentSlide + 1 : 1}{' '}
                         of {services.length}
                     </span>
                     <span onClick={next}>
-                        <i class='fa fa-chevron-right' aria-hidden='true'></i>
+                        <i
+                            className='fa fa-chevron-right'
+                            aria-hidden='true'
+                        ></i>
                     </span>
                 </div>
             </div>

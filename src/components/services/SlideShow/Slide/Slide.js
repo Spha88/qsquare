@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import Button from '../../../layout/Button/Button2';
 
 const Slide = ({ service, openModal, index, currentSlide }) => {
-    console.log(`index: ${index} current slide: ${currentSlide}`);
-
     return (
         <div
             className={`${classes.Slide} ${

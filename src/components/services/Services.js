@@ -17,8 +17,6 @@ import sars_registration from '../../assets/images/smme_bg.jpg';
 const Services = () => {
     // Internet Explorer 6-11
     const isIE = /*@cc_on!@*/ false || !!document.documentMode;
-
-    console.log('This is IE: ' + isIE);
     let bg_images = [
         marketing_bg,
         ict_services_bg,
