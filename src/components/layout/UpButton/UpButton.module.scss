@@ -23,7 +23,7 @@
         @include transition;
     }
     @include media($bp-mobile) {
-        top: 70%;
+        top: 10%;
         width: 100px;
     }
 }

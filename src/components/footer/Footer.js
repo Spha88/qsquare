@@ -55,6 +55,7 @@ const Footer = () => {
                     <a href='http://www.netslate.co.za'>Website by Spha</a>
                 </div>
             </Container>
+
             <UpButton />
         </div>
     );
