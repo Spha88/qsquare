@@ -14,19 +14,16 @@ export const sendEmail = emailDetails => dispatch => {
             subject: emailDetails.subject,
             message: emailDetails.message,
         },
-
     })
         .then(res => {
             dispatch({
                 type: types.EMAIL_SENT,
             });
-            console.log(res);
         })
         .catch(error => {
             dispatch({
                 type: types.EMAIL_SENDING_FAILED,
             });
-            console.log(error.message);
         });
 };
 

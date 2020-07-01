@@ -29,7 +29,6 @@ const Form = ({ sendEmail, sending, emailSent }) => {
         }
     };
     return (
-
         <form
             className={classes.ContactForm}
             onSubmit={handleSubmit(submit)}
@@ -37,12 +36,14 @@ const Form = ({ sendEmail, sending, emailSent }) => {
         >
             <h3>Say something</h3>
             {sending && <Loader />}
-            {emailSent && <span className={classes.MessageSent}>Message sent.</span>}
+            {emailSent && (
+                <span className={classes.MessageSent}>Message sent.</span>
+            )}
 
             <div
                 className={`${classes.FormControl} ${
                     errors.name && classes.Error
-                    }`}
+                }`}
             >
                 <input
                     type='text'
@@ -72,7 +73,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.number && classes.Error
-                    }`}
+                }`}
             >
                 <input
                     type='tel'
@@ -98,7 +99,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.email && classes.Error
-                    }`}
+                }`}
             >
                 <input
                     type='text'
@@ -118,12 +119,18 @@ const Form = ({ sendEmail, sending, emailSent }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.subject && classes.Error
-                    }`}
+                }`}
             >
                 <select
                     id='subject'
                     name='subject'
-                    ref={register({ required: 'Please choose a subject', maxLength: { value: 40, message: 'Max. characters for subject is 40' } })}
+                    ref={register({
+                        required: 'Please choose a subject',
+                        maxLength: {
+                            value: 40,
+                            message: 'Max. characters for subject is 40',
+                        },
+                    })}
                 >
                     <option value=''>choose a subject</option>
                     <option value='Internet and Digital Marketing'>
@@ -149,7 +156,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
             <div
                 className={`${classes.FormControl} ${
                     errors.message && classes.Error
-                    }`}
+                }`}
             >
                 <textarea
                     defaultValue='Message'
@@ -179,7 +186,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
 
 const mapStateToProps = state => ({
     sending: state.contact.sending,
-    emailSent: state.contact.emailSent
-})
+    emailSent: state.contact.emailSent,
+});
 
 export default connect(mapStateToProps, { sendEmail })(Form);
