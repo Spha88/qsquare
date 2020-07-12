@@ -36,6 +36,10 @@ const Nav = () => {
                     onClick={() => scroll.scrollToTop()}
                 ></div>
 
+                <div className={classes.Slogan}>
+                    <p>Experience digital transition</p>
+                </div>
+
                 <DesktopNav open={showDeskTopNav} closeNav={toggleDesktopNav} />
                 <MobileNav open={openMobileNav} closeNav={toggleMobileNav} />
 
