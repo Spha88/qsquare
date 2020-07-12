@@ -34,7 +34,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
             onSubmit={handleSubmit(submit)}
             id='contact-form'
         >
-            <h3>Say something</h3>
+            <h3>How can we help you?</h3>
             {sending && <Loader />}
             {emailSent && (
                 <span className={classes.MessageSent}>Message sent.</span>
@@ -132,7 +132,7 @@ const Form = ({ sendEmail, sending, emailSent }) => {
                         },
                     })}
                 >
-                    <option value=''>choose a subject</option>
+                    <option value=''>Choose a subject</option>
                     <option value='Internet and Digital Marketing'>
                         Internet and Digital Marketing
                     </option>

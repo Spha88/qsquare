@@ -15,8 +15,8 @@ const hero = () => {
                     fully automated entity.
                 </p>
 
-                <Link to='about' duration={500} smooth={true} offset={-50}>
-                    <Button label='Learn More' />
+                <Link to='contact' duration={500} smooth={true} offset={-50}>
+                    <Button label='Request a service' />
                 </Link>
             </div>
         </div>
