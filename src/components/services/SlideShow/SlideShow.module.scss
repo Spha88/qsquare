@@ -43,7 +43,7 @@
         }
         .SlideControls {
             position: absolute;
-            bottom: -40px;
+            bottom: -55px;
             display: flex;
             @include transition;
             @include media($bp-mobile) {
