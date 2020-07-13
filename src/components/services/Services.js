@@ -14,6 +14,8 @@ import it_performance_bg from '../../assets/images/it_performance.jpg';
 import engineering from '../../assets/images/software_engineering.jpg';
 import sars_registration from '../../assets/images/smme_bg.jpg';
 
+import ExplainerVideo from './ExplainerVideo/ExplainerVideo';
+
 const Services = () => {
     // Internet Explorer 6-11
     const isIE = /*@cc_on!@*/ false || !!document.documentMode;
@@ -44,9 +46,9 @@ const Services = () => {
                     <header className={classes.Services_header}>
                         <h1>Services</h1>
                     </header>
-
                     <ServicesLead />
                 </div>
+                <ExplainerVideo />
             </Container>
 
             <SlideShow services={myServices} />

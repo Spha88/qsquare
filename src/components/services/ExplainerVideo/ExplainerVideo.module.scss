@@ -1,0 +1,83 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
+.Explainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 7rem 0 4rem;
+    @include media($bp-tablet) {
+        flex-direction: column-reverse;
+    }
+    .Lead {
+        width: 40%;
+        position: relative;
+        margin-bottom: 2rem;
+        @include media($bp-tablet) {
+            width: 100%;
+        }
+        .LeadContent {
+            padding: 3rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 700px;
+            background: $theme-primary-color;
+            @include transition;
+            @include media($bp-tablet) {
+                position: relative;
+                width: 100%;
+                top: 0;
+                transform: translateY(0);
+                padding: 2rem;
+            }
+            &.Playing {
+                width: 100%;
+            }
+            h3 {
+                margin: 0;
+                color: $theme-white-color;
+            }
+            p {
+                color: $theme-white-color;
+            }
+        }
+    }
+    .VideoContainer {
+        width: 60%;
+        position: relative;
+        @include media($bp-tablet) {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+        border: 1px solid $theme-primary-color;
+        &.Playing {
+            border: 1px solid transparent;
+        }
+        &:hover {
+            .PlayButton {
+                display: flex;
+                &.Playing {
+                    display: flex;
+                }
+            }
+        }
+        .PlayButton {
+            position: absolute;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $theme-primary-color;
+            &.Playing {
+                display: none;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from './SlideShow.module.scss';
 import Slide from './Slide/Slide';
 import ServiceModal from '../../layout/serviceModal/ServiceModal';
-import scrollReveal from 'scrollreveal';
+// import scrollReveal from 'scrollreveal';
 
 const SlideShow = ({ services }) => {
     let [currentSlide, setCurrentSlide] = useState(0);
@@ -14,6 +14,7 @@ const SlideShow = ({ services }) => {
     const [slideToOpen, setSlideToOpen] = useState(currentSlide);
 
     let position = (currentSlide / (services.length * 2)) * 100;
+
     const next = () => {
         if (currentSlide < services.length) {
             setTransition('all 500ms ease-in-out');
@@ -45,14 +46,14 @@ const SlideShow = ({ services }) => {
 
     useEffect(() => {
         // ScrollReveal animation
-        const options = {
-            distance: '100%',
-            origin: 'right',
-            delay: '0',
-            duration: '2000',
-            viewFactor: 0.5,
-        };
-        scrollReveal().reveal('#service-slide', options);
+        // const options = {
+        //     distance: '100%',
+        //     origin: 'right',
+        //     delay: '0',
+        //     duration: '2000',
+        //     viewFactor: 0.5,
+        // };
+        // scrollReveal().reveal('#service-slide', options);
         //-------------------------------
     });
 
