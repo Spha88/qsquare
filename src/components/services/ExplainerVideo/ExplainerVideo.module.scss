@@ -8,6 +8,7 @@
     padding: 7rem 0 4rem;
     @include media($bp-tablet) {
         flex-direction: column-reverse;
+        padding: 2rem 0 1rem;
     }
     .Lead {
         width: 40%;
@@ -40,6 +41,7 @@
             }
             p {
                 color: $theme-white-color;
+                line-height: 1.5em;
             }
         }
     }
