@@ -1,10 +1,16 @@
 import React from 'react';
 import classes from './NotFound.module.scss';
+import { Link } from 'react-router-dom';
+import not_found from '../../assets/images/not_found.svg';
 
 const NotFound = () => {
     return (
         <div className={classes.NotFound}>
-            <h1>404 | Oops Page Does Not Exist</h1>
+            <div>
+                <img src={not_found} alt="page not found" />
+                <h1>Oops page not found</h1>
+                <Link to="/">Back</Link>
+            </div>
         </div>
     );
 };
