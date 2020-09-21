@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import video from '../../../assets/videos/advert.mp4';
+import video from '../../../assets/videos/advert2.mp4';
 import classes from './ExplainerVideo.module.scss';
 
 const ExplainerVideo = () => {
